@@ -1,0 +1,8 @@
+title: YDS Documentation
+metadata:
+    description: 'YDS Documentation Description'
+
+taxonomies: [category,tag]
+summary:
+  size: 300
+

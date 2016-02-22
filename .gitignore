@@ -33,4 +33,4 @@ target/
 *.sh
 *.txt.*
 .directory
-cache/
+components-visualisation/cache/

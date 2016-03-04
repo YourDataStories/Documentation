@@ -1,12 +1,12 @@
 ---
-title: Welcome
+title: Components
 taxonomy:
     category: docs
 ---
 
 ### Chapter 1
 
-# Welcome
+# Components
 
 
-Discover the **awesome** visualisation library of the **Your Data Stories** platform
+Discover the **awesome** components of the **Your Data Stories** platform

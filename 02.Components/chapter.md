@@ -9,4 +9,4 @@ taxonomy:
 # Components
 
 
-Discover the **awesome** components of the **YourDataStories** platform.
+Discover the **awesome** components of the **YourDataStories** platform!

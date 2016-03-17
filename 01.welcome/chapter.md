@@ -9,4 +9,4 @@ taxonomy:
 # Welcome
 
 
-Discover the **awesome** visualisation library of the **YourDataStories** platform
+Discover the **awesome** visualisation library of the **YourDataStories** platform and learn how to use it.

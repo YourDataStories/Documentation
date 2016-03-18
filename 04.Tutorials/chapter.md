@@ -12,4 +12,4 @@ taxonomy:
 Tutorials!
 
 
-Tutorials about the use of YDS components and APIs and more.
+Tutorials about the use of YDS components and APIs!!.

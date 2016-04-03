@@ -4,14 +4,21 @@ title: 'JSON-LD API'
 
 This section provides some examples regarding the [JSON-LD](http://json-ld.org/) API.
 
-
+### API for Component: **grid**
 | Action (Grid Component) | API Call |
 |-------------------------|----------|
 | Get project with id (**Greek**): http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project**, **lang=el**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http%3A%2F%2Flinkedeconomy.org%2Fresource%2FSubsidy%2F519339&type=project&lang=el> |
 | Get project with id (**English**): http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project**, **lang=en**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project&lang=en> |
 | Get project with id (**all available languages**): http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project**, **lang=i18n**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project&lang=i18n> |
 | Get types (facets) supported for id: http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl**/types**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl/types?id=http://linkedeconomy.org/resource/Subsidy/519339> |
-| Get related projects of project with id: http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project.related.projects**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project.related.projects> |
+| Get **related projects** of project with id: http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project.related.projects**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project.related.projects> |
 | Get related **decisions** of project with id: http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project.decisions**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project.decisions> |
 | Get related **financial** decisions of project with id: http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project.decisions.financial**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project.decisions.financial> |
 | Get related **non-financial** decisions of project with id: http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project.decisions.non_financial**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project.decisions.non_financial> |
+
+### API for Model Information
+| Action (Grid Component) | API Call |
+|-------------------------|----------|
+| Get a list of all classes, their properties, and property types: | model/classes.tcl<br><http://platform.yourdatastories.eu/api/json-ld/model/classes.tcl> |
+| Get a list of all their properties and their types for class "PublicProject":<br>http://linkedeconomy.org/ontology#PublicProject | model/class.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/class.tcl?id=http://linkedeconomy.org/ontology%23PublicProject> |
+| Get a list of all their properties and their types for class "Subsidy":<br>http://linkedeconomy.org/ontology#Subsidy | model/class.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/class.tcl?id=http://linkedeconomy.org/ontology%23Subsidy> |

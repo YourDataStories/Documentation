@@ -11,6 +11,10 @@ The JSON-LD API provides also access to search (implemented through an [Apache S
 |-----------------|----------|
 | Search with **"Ηρακλειο"** (a misspelled version of the Greek city "Ηράκλειο") | component/search.tcl, q=Ηρακλειο<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=Ηρακλειο> |
 | Search with "Ηρακλειο" with facet **"Subsidy"** | component/search.tcl, q=Ηρακλειο, fq=type:Subsidy<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=Ηρακλειο&fq=type:Subsidy> |
+| List all **"Subsidy"**s | component/search.tcl, q=*:*, fq=type:Subsidy<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:Subsidy> |
+| List all **"FinancialDecision"**s | component/search.tcl, q=*:*, fq=type:FinancialDecision<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:FinancialDecision> |
+| List all **"NonFinancialDecision"**s | component/search.tcl, q=*:*, fq=type:NonFinancialDecision<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:NonFinancialDecision> |
+| List all **"Decision"**s | component/search.tcl, q=*:*, fq=type:Decision<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:Decision> |
 
 ### API for Component: **grid**
 | Action (Grid Component) | API Call |

@@ -10,12 +10,12 @@ The JSON-LD API provides also access to search (implemented through an [Apache S
 | Action (Search) | API Call |
 |-----------------|----------|
 | Search with **"Ηρακλειο"** (a misspelled version of the Greek city "Ηράκλειο") | component/search.tcl, q=Ηρακλειο<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=Ηρακλειο> |
-| Search with "Ηρακλειο" with facet **"Subsidy" | component/search.tcl, q=Ηρακλειο, fq=type:Subsidy<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=Ηρακλειο&fq=type:Subsidy> |
+| Search with "Ηρακλειο" with facet **"Subsidy"** | component/search.tcl, q=Ηρακλειο, fq=type:Subsidy<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=Ηρακλειο&fq=type:Subsidy> |
 
 ### API for Component: **grid**
 | Action (Grid Component) | API Call |
 |-------------------------|----------|
-| Get project with id (**Greek**): http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project**, **lang=el**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http%3A%2F%2Flinkedeconomy.org%2Fresource%2FSubsidy%2F519339&type=project&lang=el> |
+| Get project with id (**Greek**): http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project**, **lang=el**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project&lang=el> |
 | Get project with id (**English**): http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project**, **lang=en**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project&lang=en> |
 | Get project with id (**all available languages**): http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project**, **lang=i18n**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project&lang=i18n> |
 | Get **types** (facets) supported by grids for id: http://linkedeconomy.org/resource/Subsidy/519339 (Types depend on the classes of the provided id) | component/grid.tcl**/types**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl/types?id=http://linkedeconomy.org/resource/Subsidy/519339> |
@@ -30,3 +30,5 @@ The JSON-LD API provides also access to search (implemented through an [Apache S
 | Get a list of all classes, their properties, and property types: | model/classes.tcl<br><http://platform.yourdatastories.eu/api/json-ld/model/classes.tcl> |
 | Get a list of all their properties and their types for class **"PublicProject"**:<br>http://linkedeconomy.org/ontology#PublicProject | model/class.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/class.tcl?id=http://linkedeconomy.org/ontology%23PublicProject> |
 | Get a list of all their properties and their types for class **"Subsidy"**:<br>http://linkedeconomy.org/ontology#Subsidy | model/class.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/class.tcl?id=http://linkedeconomy.org/ontology%23Subsidy> |
+| Describe **object** (type: Subsidy):<br>http://linkedeconomy.org/resource/Subsidy/519339 | model/describe.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/describe.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339> |
+| Describe **object** (type: CommittedItem):<br>http://linkedeconomy.org/resource/CommittedItem/456Ζ7ΛΚ-ΚΚΙ | model/describe.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/describe.tcl?id=http://linkedeconomy.org/resource/CommittedItem/456Ζ7ΛΚ-ΚΚΙ> |

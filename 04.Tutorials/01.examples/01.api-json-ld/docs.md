@@ -17,8 +17,8 @@ This section provides some examples regarding the [JSON-LD](http://json-ld.org/)
 | Get related **non-financial** decisions of project with id: http://linkedeconomy.org/resource/Subsidy/519339 | component/grid.tcl, **type=project.decisions.non_financial**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project.decisions.non_financial> |
 
 ### API for Model Information
-| Action (Grid Component) | API Call |
-|-------------------------|----------|
+| Action | API Call |
+|--------|----------|
 | Get a list of all classes, their properties, and property types: | model/classes.tcl<br><http://platform.yourdatastories.eu/api/json-ld/model/classes.tcl> |
 | Get a list of all their properties and their types for class "PublicProject":<br>http://linkedeconomy.org/ontology#PublicProject | model/class.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/class.tcl?id=http://linkedeconomy.org/ontology%23PublicProject> |
 | Get a list of all their properties and their types for class "Subsidy":<br>http://linkedeconomy.org/ontology#Subsidy | model/class.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/class.tcl?id=http://linkedeconomy.org/ontology%23Subsidy> |

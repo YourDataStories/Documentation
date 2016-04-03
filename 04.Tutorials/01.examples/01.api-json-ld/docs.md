@@ -4,6 +4,14 @@ title: 'JSON-LD API'
 
 This section provides some examples regarding the [JSON-LD](http://json-ld.org/) API.
 
+### API for Search
+The JSON-LD API provides also access to search (implemented through an [Apache Solr](http://lucene.apache.org/solr/) server), altough the results are **not** in JSON-LD (as results are provided directly from the Solr server in JSON format).
+
+| Action (Search) | API Call |
+|-----------------|----------|
+| Search with **"Ηρακλειο"** (a misspelled version of the Greek city "Ηράκλειο") | component/search.tcl, q=Ηρακλειο<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=Ηρακλειο> |
+| Search with "Ηρακλειο" with facet **"Subsidy" | component/search.tcl, q=Ηρακλειο, fq=type:Subsidy<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=Ηρακλειο&fq=type:Subsidy> |
+
 ### API for Component: **grid**
 | Action (Grid Component) | API Call |
 |-------------------------|----------|
@@ -20,5 +28,5 @@ This section provides some examples regarding the [JSON-LD](http://json-ld.org/)
 | Action | API Call |
 |--------|----------|
 | Get a list of all classes, their properties, and property types: | model/classes.tcl<br><http://platform.yourdatastories.eu/api/json-ld/model/classes.tcl> |
-| Get a list of all their properties and their types for class "PublicProject":<br>http://linkedeconomy.org/ontology#PublicProject | model/class.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/class.tcl?id=http://linkedeconomy.org/ontology%23PublicProject> |
-| Get a list of all their properties and their types for class "Subsidy":<br>http://linkedeconomy.org/ontology#Subsidy | model/class.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/class.tcl?id=http://linkedeconomy.org/ontology%23Subsidy> |
+| Get a list of all their properties and their types for class **"PublicProject"**:<br>http://linkedeconomy.org/ontology#PublicProject | model/class.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/class.tcl?id=http://linkedeconomy.org/ontology%23PublicProject> |
+| Get a list of all their properties and their types for class **"Subsidy"**:<br>http://linkedeconomy.org/ontology#Subsidy | model/class.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/class.tcl?id=http://linkedeconomy.org/ontology%23Subsidy> |

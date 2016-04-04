@@ -36,7 +36,7 @@ The JSON-LD API provides also access to search (implemented through an [Apache S
 ### API for Component: **map**
 | Action (Map Component) | API Call |
 |-------------------------|----------|
-| Get the route of project id:<br>http://linkedeconomy.org/resource/Subsidy/519339 | component/map.tcl, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/map.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339>&lang=en |
+| Get the route of project id:<br>http://linkedeconomy.org/resource/Subsidy/519339 | component/map.tcl, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/map.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=en> |
 
 
 ### API for Model Information

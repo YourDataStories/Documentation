@@ -15,6 +15,8 @@ The JSON-LD API provides also access to search (implemented through an [Apache S
 | List all **"FinancialDecision"**s | component/search.tcl, q=*:*, fq=type:FinancialDecision<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:FinancialDecision> |
 | List all **"NonFinancialDecision"**s | component/search.tcl, q=*:*, fq=type:NonFinancialDecision<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:NonFinancialDecision> |
 | List all **"Decision"**s | component/search.tcl, q=*:*, fq=type:Decision<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:Decision> |
+| List all **"Contract"**s | component/search.tcl, q=*:*, fq=type:Contract<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:Contract> |
+
 
 ### API for Component: **grid**
 | Action (Grid Component) | API Call |

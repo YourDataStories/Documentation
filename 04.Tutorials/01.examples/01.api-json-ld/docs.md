@@ -43,6 +43,7 @@ The JSON-LD API provides also access to search (implemented through an [Apache S
 ### API for Component: **Pie Chart**
 | Action (Pie Chart Component) | API Call |
 |-------------------------|----------|
+| Get **types** (facets) supported by pie charts for id:<br>http://linkedeconomy.org/resource/Subsidy/519339 (Types depend on the classes of the provided id) | component/piechart.tcl**/types**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/piechart.tcl/types?id=http://linkedeconomy.org/resource/Subsidy/519339> |
 | Get related financial decisions for project id:<br>http://linkedeconomy.org/resource/Subsidy/519339 | component/piechart.tcl, type=project.decisions.financial, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/piechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=en&type=project.decisions.financial> |
 | Get related non-financial decisions for project id:<br>http://linkedeconomy.org/resource/Subsidy/519339 | component/piechart.tcl, type=project.decisions.non_financial, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/piechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=el&type=project.decisions.non_financial> |
 

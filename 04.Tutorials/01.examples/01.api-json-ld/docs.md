@@ -40,6 +40,12 @@ The JSON-LD API provides also access to search (implemented through an [Apache S
 |-------------------------|----------|
 | Get the route of project id:<br>http://linkedeconomy.org/resource/Subsidy/519339 | component/map.tcl, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/map.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=en> |
 
+### API for Component: **Pie Chart**
+| Action (Pie Chart Component) | API Call |
+|-------------------------|----------|
+| Get the route of project id:<br>http://linkedeconomy.org/resource/Subsidy/519339 | component/piechart.tcl, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/piechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=en> |
+
+
 
 ### API for Model Information
 | Action | API Call |

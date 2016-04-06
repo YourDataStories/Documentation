@@ -47,6 +47,13 @@ The JSON-LD API provides also access to search (implemented through an [Apache S
 | Get related financial decisions for project id:<br>http://linkedeconomy.org/resource/Subsidy/519339 | component/piechart.tcl, type=project.decisions.financial, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/piechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=en&type=project.decisions.financial> |
 | Get related non-financial decisions for project id:<br>http://linkedeconomy.org/resource/Subsidy/519339 | component/piechart.tcl, type=project.decisions.non_financial, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/piechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=el&type=project.decisions.non_financial> |
 
+### API for Component: **Line Chart**
+| Action (Line Chart Component) | API Call |
+|-------------------------|----------|
+| Get **types** (facets) supported by line charts for id:<br>http://linkedeconomy.org/resource/Subsidy/519339 (Types depend on the classes of the provided id) | component/linechart.tcl**/types**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/linechart.tcl/types?id=http://linkedeconomy.org/resource/Subsidy/519339> |
+| Plot the amount of related financial decisions over time for project id:<br>http://linkedeconomy.org/resource/Subsidy/519339 | component/linechart.tcl, **type=project.decisions.financial.amount.over.date**, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/linechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=en&type=project.decisions.financial.amount.over.date> |
+| Plot number of related financial decisions over time for project id:<br>http://linkedeconomy.org/resource/Subsidy/519339 | component/linechart.tcl, **type=project.decisions.financial.decisions.over.date**, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/linechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=el&type=project.decisions.financial.decisions.over.date> |
+
 ### API for Model Information
 | Action | API Call |
 |--------|----------|

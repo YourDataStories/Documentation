@@ -6,7 +6,7 @@ taxonomy:
 
 ### Chapter 5
 
-# YDS Data Model Description
+# YDS Data Model
 
 
 

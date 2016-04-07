@@ -1,6 +1,11 @@
 ---
 title: 'Data model views'
+taxonomy:
+    category:
+        - docs
 ---
+
+### Chapter 5
 
 ##Input data examples
 Input data extracts per data source can be found [here](https://github.com/YourDataStories/ontology/blob/master/Overall%20model/Input%20Data%20Examples.md).

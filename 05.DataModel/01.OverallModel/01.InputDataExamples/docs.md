@@ -1,4 +1,6 @@
-##Input Data Examples per Dataset
+---
+title: 'Input Data Examples per Dataset'
+---
 
 ### Input Data From NSRF Projects
 Column | Real Data

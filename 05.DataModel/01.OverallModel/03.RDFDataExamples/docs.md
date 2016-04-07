@@ -1,4 +1,6 @@
-##RDF Data Examples per Dataset
+---
+title: 'RDF Data Examples per Dataset'
+---
 
 ###RDF example for input data of NSRF Projects
 ```xml

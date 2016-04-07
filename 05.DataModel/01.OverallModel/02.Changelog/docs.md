@@ -1,4 +1,7 @@
-# Change Log
+---
+title: 'Change Log'
+---
+
 All notable changes to the data model will be documented in this file.
 
 ## [1.1.0] - 2016-03-30

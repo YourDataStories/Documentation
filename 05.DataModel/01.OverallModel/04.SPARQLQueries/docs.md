@@ -1,4 +1,6 @@
-# Example Queries
+---
+title: 'SPARQL Example Queries'
+---
 
 ## A. Geospatial Data
 

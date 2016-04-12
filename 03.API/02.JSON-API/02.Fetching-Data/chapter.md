@@ -1,12 +1,12 @@
 ---
-title: YDS APIs
+title: Fetching Data
 taxonomy:
     category: docs
 ---
 
 ### Chapter 3
 
-# YDS APIs
+# Fetching Data
 
 
 The YDS API documentation!

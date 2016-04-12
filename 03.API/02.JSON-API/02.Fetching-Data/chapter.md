@@ -1,10 +1,8 @@
 ---
 title: Fetching Data
 taxonomy:
-    category: docs
+    category: chapter
 ---
-
-### Chapter 3
 
 # Fetching Data
 

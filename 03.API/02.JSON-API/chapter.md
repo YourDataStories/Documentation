@@ -1,12 +1,12 @@
 ---
-title: YDS APIs
+title: JSON API
 taxonomy:
     category: docs
 ---
 
 ### Chapter 3
 
-# YDS APIs
+# JSON API
 
 
 The YDS API documentation!

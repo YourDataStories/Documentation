@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-### Chapter 3
+### Chapter 2
 
 # JSON API
 

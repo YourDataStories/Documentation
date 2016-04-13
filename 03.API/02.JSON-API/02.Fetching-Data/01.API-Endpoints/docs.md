@@ -4,6 +4,42 @@ taxonomy:
     category: docs
 ---
 
+| Resource Type  | End-point | Notes |
+| --------------- | --------- | ------|
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+| **Resource Type**  | End-point | Notes |
+
+
+
 /catalogs/
 /datasets/
 /distributions/

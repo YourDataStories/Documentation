@@ -120,8 +120,11 @@ Content-Type: application/vnd.api+json
       }
     }
   }
-}```
+}
+```
+
 If the above article's author is missing, then a GET request to that related resource would return:
+
 ```
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
@@ -131,15 +134,16 @@ Content-Type: application/vnd.api+json
     "self": "http://example.com/articles/1/author"
   },
   "data": null
-}```
+}
+```
 404 Not Found
 
 A server MUST respond with 404 Not Found when processing a request to fetch a single resource that does not exist, except when the request warrants a 200 OK response with null as the primary data (as described above).
 
 Other Responses
 
-A server MAY respond with other HTTP status codes.
++ A server MAY respond with other HTTP status codes.
 
-A server MAY include error details with error responses.
++ A server MAY include error details with error responses.
 
-A server MUST prepare responses, and a client MUST interpret responses, in accordance with HTTP semantics.
++ A server MUST prepare responses, and a client MUST interpret responses, in accordance with HTTP semantics.

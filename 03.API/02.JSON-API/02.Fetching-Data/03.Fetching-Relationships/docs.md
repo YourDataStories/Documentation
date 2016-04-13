@@ -138,7 +138,7 @@ Content-Type: application/vnd.api+json
 
 A server MUST return 404 Not Found when processing a request to fetch a relationship link URL that does not exist.
 
->>>>> This can happen when the parent resource of the relationship does not exist. For example, when /articles/1 does not exist, request to /articles/1/relationships/tags returns 404 Not Found.
+>>>>> This can happen when the parent resource of the relationship does not exist. For example, when /trade-activities/cee39b1afd34f2ec536304461134c0a0/ does not exist, request to /trade-activities/cee39b1afd34f2ec536304461134c0a0/links/concerns returns 404 Not Found.
 
 If a relationship link URL exists but the relationship is empty, then 200 OK MUST be returned, as described above.
 Other Responses

@@ -12,10 +12,10 @@ Pagination links MUST appear in the links object that corresponds to a collectio
 
 The following keys MUST be used for pagination links:
 
-    + first: the first page of data
-    + last: the last page of data
-    + prev: the previous page of data
-    + next: the next page of data
++ first: the first page of data
++ last: the last page of data
++ prev: the previous page of data
++ next: the next page of data
 
 Keys MUST either be omitted or have a null value to indicate that a particular link is unavailable.
 

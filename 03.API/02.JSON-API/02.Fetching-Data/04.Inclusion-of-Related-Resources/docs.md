@@ -4,9 +4,46 @@ taxonomy:
     category: docs
 ---
 
+Inclusion of Related Resources
 
-We employ **state-of-the-art visual analytics techniques** in the context of visualizing complex aspects of the data, **providing insights and revealing the hidden stories in data**. All of the components are integrated into re-usable building blocks, allowing users to obtain visual-interactive access to all aspects of data, enabling users of these components to intuitively access and modify parameters of certain queries, affecting visualized insights, data interactions and interconnections, and exploration capabilities. The components provided are **highly customizable and re-usable**, as they constitute key elements of many application types. In addition, the components provide **support for a wide range of application types**, ranging from mobile applications, to Web 2.0 portals, and to social media applications.
+An endpoint MAY return resources related to the primary data by default.
 
-The components introduced in the following paragraphs are part of a larger JavaScript library built according to the requirements of the YDS Platform. The produced library leverages the features of the **[AngularJS MVC Framework](https://angularjs.org/ "Visit AngularJS MVC Framework!")**  in order to combine different visualization libraries such as **[Highcharts](http://www.highcharts.com/ "Visit Highcharts!")** , **[ag-Grid](http://www.ag-grid.com/ "Visit ag-Grid!")** and **[Leaflet](http://leafletjs.com/ "Visit Leaflet!")** into one highly capable visualization library.
+An endpoint MAY also support an include request parameter to allow the client to customize which related resources should be returned.
 
->>>>> AngularJS is a fully extensible and highly modular toolset for extending the HTML vocabulary with dynamic views, modularity, and ease of maintenance. In that manner, third party developers have the ability to extend the capabilities of the YDS visualization library with minimum effort.
+If an endpoint does not support the include parameter, it MUST respond with 400 Bad Request to any requests that include it.
+
+If an endpoint supports the include parameter and a client supplies it, the server MUST NOT include unrequested resource objects in the included section of the compound document.
+
+The value of the include parameter MUST be a comma-separated (U+002C COMMA, ",") list of relationship paths. A relationship path is a dot-separated (U+002E FULL-STOP, ".") list of relationship names.
+
+If a server is unable to identify a relationship path or does not support inclusion of resources from a path, it MUST respond with 400 Bad Request.
+
+    Note: For example, a relationship path could be comments.author, where comments is a relationship listed under a articles resource object, and author is a relationship listed under a comments resource object.
+
+For instance, comments could be requested with an article:
+
+GET /articles/1?include=comments HTTP/1.1
+Accept: application/vnd.api+json
+
+In order to request resources related to other resources, a dot-separated path for each relationship name can be specified:
+
+GET /articles/1?include=comments.author HTTP/1.1
+Accept: application/vnd.api+json
+
+    Note: Because compound documents require full linkage (except when relationship linkage is excluded by sparse fieldsets), intermediate resources in a multi-part path must be returned along with the leaf nodes. For example, a response to a request for comments.author should include comments as well as the author of each of those comments.
+
+    Note: A server may choose to expose a deeply nested relationship such as comments.author as a direct relationship with an alias such as comment-authors. This would allow a client to request /articles/1?include=comment-authors instead of /articles/1?include=comments.author. By abstracting the nested relationship with an alias, the server can still provide full linkage in compound documents without including potentially unwanted intermediate resources.
+
+Multiple related resources can be requested in a comma-separated list:
+
+GET /articles/1?include=author,comments.author HTTP/1.1
+Accept: application/vnd.api+json
+
+Furthermore, related resources can be requested from a relationship endpoint:
+
+GET /articles/1/relationships/comments?include=comments.author HTTP/1.1
+Accept: application/vnd.api+json
+
+In this case, the primary data would be a collection of resource identifier objects that represent linkage to comments for an article, while the full comments and comment authors would be returned as included data.
+
+    Note: This section applies to any endpoint that responds with primary data, regardless of the request type. For instance, a server could support the inclusion of related resources along with a POST request to create a resource or relationship.

@@ -4,9 +4,33 @@ taxonomy:
     category: docs
 ---
 
+Sorting
 
-We employ **state-of-the-art visual analytics techniques** in the context of visualizing complex aspects of the data, **providing insights and revealing the hidden stories in data**. All of the components are integrated into re-usable building blocks, allowing users to obtain visual-interactive access to all aspects of data, enabling users of these components to intuitively access and modify parameters of certain queries, affecting visualized insights, data interactions and interconnections, and exploration capabilities. The components provided are **highly customizable and re-usable**, as they constitute key elements of many application types. In addition, the components provide **support for a wide range of application types**, ranging from mobile applications, to Web 2.0 portals, and to social media applications.
+A server MAY choose to support requests to sort resource collections according to one or more criteria ("sort fields").
 
-The components introduced in the following paragraphs are part of a larger JavaScript library built according to the requirements of the YDS Platform. The produced library leverages the features of the **[AngularJS MVC Framework](https://angularjs.org/ "Visit AngularJS MVC Framework!")**  in order to combine different visualization libraries such as **[Highcharts](http://www.highcharts.com/ "Visit Highcharts!")** , **[ag-Grid](http://www.ag-grid.com/ "Visit ag-Grid!")** and **[Leaflet](http://leafletjs.com/ "Visit Leaflet!")** into one highly capable visualization library.
+    Note: Although recommended, sort fields do not necessarily need to correspond to resource attribute and association names.
 
->>>>> AngularJS is a fully extensible and highly modular toolset for extending the HTML vocabulary with dynamic views, modularity, and ease of maintenance. In that manner, third party developers have the ability to extend the capabilities of the YDS visualization library with minimum effort.
+    Note: It is recommended that dot-separated (U+002E FULL-STOP, ".") sort fields be used to request sorting based upon relationship attributes. For example, a sort field of author.name could be used to request that the primary data be sorted based upon the name attribute of the author relationship.
+
+An endpoint MAY support requests to sort the primary data with a sort query parameter. The value for sort MUST represent sort fields.
+
+GET /people?sort=age HTTP/1.1
+Accept: application/vnd.api+json
+
+An endpoint MAY support multiple sort fields by allowing comma-separated (U+002C COMMA, ",") sort fields. Sort fields SHOULD be applied in the order specified.
+
+GET /people?sort=age,name HTTP/1.1
+Accept: application/vnd.api+json
+
+The sort order for each sort field MUST be ascending unless it is prefixed with a minus (U+002D HYPHEN-MINUS, "-"), in which case it MUST be descending.
+
+GET /articles?sort=-created,title HTTP/1.1
+Accept: application/vnd.api+json
+
+The above example should return the newest articles first. Any articles created on the same date will then be sorted by their title in ascending alphabetical order.
+
+If the server does not support sorting as specified in the query parameter sort, it MUST return 400 Bad Request.
+
+If sorting is supported by the server and requested by the client via query parameter sort, the server MUST return elements of the top-level data array of the response ordered according to the criteria specified. The server MAY apply default sorting rules to top-level data if request parameter sort is not specified.
+
+    Note: This section applies to any endpoint that responds with a resource collection as primary data, regardless of the request type.

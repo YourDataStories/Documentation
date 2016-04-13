@@ -86,7 +86,7 @@ Content-Type: application/vnd.api+json
 
 {
   "links": {
-    "self": "http://example.com/trade-activities"
+    "self": "/trade-activities/"
   },
   "data": []
 } 
@@ -97,33 +97,53 @@ null is only an appropriate response when the requested URL is one that might co
 
 >>>>> Consider, for example, a request to fetch a to-one related resource link. This request would respond with null when the relationship is empty (such that the link is corresponding to no resources) but with the single related resource's resource object otherwise.
 
-For example, a GET request to an individual article could return:
+For example, a GET request to an individual trade activity could return:
 ```
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
 {
-  "links": {
-    "self": "http://example.com/articles/1"
-  },
-  "data": {
-    "type": "articles",
-    "id": "1",
-    "attributes": {
-      "title": "JSON API paints my bikeshed!"
-    },
-    "relationships": {
-      "author": {
-        "links": {
-          "related": "http://example.com/articles/1/author"
+  {
+    "data": {
+        "attributes": {
+            "financial-year": "2011-01-01Z"
+        },
+        "id": "800466d9a46544d1759be3cdad6d5fa2",
+        "type": "trade-activities",
+        "relationships": {
+            "concerns": {
+                "links": {
+                    "self": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/links/concerns",
+                    "related": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/concerns"
+                }
+            },
+            "origin": {
+                "links": {
+                    "self": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/links/origin",
+                    "related": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/origin"
+                }
+            },
+            "destination": {
+                "links": {
+                    "self": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/links/destination",
+                    "related": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/destination"
+                }
+            },
+            "amount": {
+                "links": {
+                    "self": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/links/amount",
+                    "related": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/amount"
+                }
+            }
         }
-      }
+    },
+    "links": {
+        "self": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2"
     }
-  }
 }
 ```
 
-If the above article's author is missing, then a GET request to that related resource would return:
+If the above trade activity's destination is missing, then a GET request to that related resource would return:
 
 ```
 HTTP/1.1 200 OK
@@ -131,7 +151,7 @@ Content-Type: application/vnd.api+json
 
 {
   "links": {
-    "self": "http://example.com/articles/1/author"
+    "self": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/destination"
   },
   "data": null
 }

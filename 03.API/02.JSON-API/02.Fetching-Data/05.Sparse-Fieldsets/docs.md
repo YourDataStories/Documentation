@@ -4,9 +4,17 @@ taxonomy:
     category: docs
 ---
 
+Sparse Fieldsets
 
-We employ **state-of-the-art visual analytics techniques** in the context of visualizing complex aspects of the data, **providing insights and revealing the hidden stories in data**. All of the components are integrated into re-usable building blocks, allowing users to obtain visual-interactive access to all aspects of data, enabling users of these components to intuitively access and modify parameters of certain queries, affecting visualized insights, data interactions and interconnections, and exploration capabilities. The components provided are **highly customizable and re-usable**, as they constitute key elements of many application types. In addition, the components provide **support for a wide range of application types**, ranging from mobile applications, to Web 2.0 portals, and to social media applications.
+A client MAY request that an endpoint return only specific fields in the response on a per-type basis by including a fields[TYPE] parameter.
 
-The components introduced in the following paragraphs are part of a larger JavaScript library built according to the requirements of the YDS Platform. The produced library leverages the features of the **[AngularJS MVC Framework](https://angularjs.org/ "Visit AngularJS MVC Framework!")**  in order to combine different visualization libraries such as **[Highcharts](http://www.highcharts.com/ "Visit Highcharts!")** , **[ag-Grid](http://www.ag-grid.com/ "Visit ag-Grid!")** and **[Leaflet](http://leafletjs.com/ "Visit Leaflet!")** into one highly capable visualization library.
+The value of the fields parameter MUST be a comma-separated (U+002C COMMA, ",") list that refers to the name(s) of the fields to be returned.
 
->>>>> AngularJS is a fully extensible and highly modular toolset for extending the HTML vocabulary with dynamic views, modularity, and ease of maintenance. In that manner, third party developers have the ability to extend the capabilities of the YDS visualization library with minimum effort.
+If a client requests a restricted set of fields for a given resource type, an endpoint MUST NOT include additional fields in resource objects of that type in its response.
+
+GET /articles?include=author&fields[articles]=title,body&fields[people]=name HTTP/1.1
+Accept: application/vnd.api+json
+
+    Note: The above example URI shows unencoded [ and ] characters simply for readability. In practice, these characters must be percent-encoded, per the requirements in RFC 3986.
+
+    Note: This section applies to any endpoint that responds with resources as primary or included data, regardless of the request type. For instance, a server could support sparse fieldsets along with a POST request to create a resource.

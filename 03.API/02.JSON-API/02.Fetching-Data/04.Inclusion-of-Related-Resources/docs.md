@@ -38,16 +38,16 @@ Accept: application/vnd.api+json
 
 Multiple related resources can be requested in a comma-separated list:
 
+HELP:(
  ```
-GET trade-activities/800466d9a46544d1759be3cdad6d5fa2?include=country,destination.country HTTP/1.1
+GET /trade-activities/800466d9a46544d1759be3cdad6d5fa2?include=concerns,destination.country HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
 Furthermore, related resources can be requested from a relationship endpoint:
 
-HELP:(
 ```
-GET trade-activities/800466d9a46544d1759be3cdad6d5fa2?include=country,destination.country HTTP/1.1
+GET /trade-activities/800466d9a46544d1759be3cdad6d5fa2?include=concerns,destination.country HTTP/1.1
 Accept: application/vnd.api+json
 ```
 

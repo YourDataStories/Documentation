@@ -6,17 +6,17 @@ taxonomy:
 
 A server MUST support fetching relationship data for every relationship URL provided as a self link as part of a relationship's links object.
 
-For example, the following request fetches data about an article's comments:
+For example, the following request fetches data about a trade activity's concerns:
 
 ```
-GET /articles/1/relationships/comments HTTP/1.1
+GET /trade-activities/800466d9a46544d1759be3cdad6d5fa2/concerns HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-And the following request fetches data about an article's author:
+And the following request fetches data about a trade activity's destination:
 
 ```
-GET /articles/1/relationships/author HTTP/1.1
+GET/trade-activities/800466d9a46544d1759be3cdad6d5fa2/destination HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
@@ -36,14 +36,23 @@ HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
 {
-  "links": {
-    "self": "/articles/1/relationships/author",
-    "related": "/articles/1/author"
-  },
-  "data": {
-    "type": "people",
-    "id": "12"
-  }
+    "data": {
+        "attributes": {},
+        "id": "899b59d5360933b672f2f9c07fd3ebf8",
+        "type": "group-national-agents",
+        "relationships": {
+            "country": {
+                "links": {
+                    "self": "/group-national-agents/899b59d5360933b672f2f9c07fd3ebf8/links/country",
+                    "related": "/group-national-agents/899b59d5360933b672f2f9c07fd3ebf8/country"
+                }
+            }
+        }
+    },
+    "links": {
+        "self": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/links/destination",
+        "related": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/destination"
+    }
 }
 ```
 
@@ -54,11 +63,11 @@ HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
 {
-  "links": {
-    "self": "/articles/1/relationships/author",
-    "related": "/articles/1/author"
-  },
-  "data": null
+    "data": null,
+    "links": {
+        "self": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/links/destination",
+        "related": "/trade-activities/800466d9a46544d1759be3cdad6d5fa2/destination"
+    }
 }
 ```
 
@@ -69,14 +78,44 @@ HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
 {
-  "links": {
-    "self": "/articles/1/relationships/tags",
-    "related": "/articles/1/tags"
-  },
-  "data": [
-    { "type": "tags", "id": "2" },
-    { "type": "tags", "id": "3" }
-  ]
+    "data": {
+        "attributes": {
+            "notation": "491110",
+            "label": "Printed Matter; Trade Advertising Material, Commercial Catalogues And The Like"
+        },
+        "id": "12cdb2deec6dee7b1442dec2f49110ae",
+        "type": "concepts",
+        "relationships": {
+            "broader-concepts": {
+                "links": {
+                    "self": "/concepts/12cdb2deec6dee7b1442dec2f49110ae/links/broader-concepts",
+                    "related": "/concepts/12cdb2deec6dee7b1442dec2f49110ae/broader-concepts"
+                }
+            },
+            "narrower-concepts": {
+                "links": {
+                    "self": "/concepts/12cdb2deec6dee7b1442dec2f49110ae/links/narrower-concepts",
+                    "related": "/concepts/12cdb2deec6dee7b1442dec2f49110ae/narrower-concepts"
+                }
+            },
+            "concept-scheme": {
+                "links": {
+                    "self": "/concepts/12cdb2deec6dee7b1442dec2f49110ae/links/concept-scheme",
+                    "related": "/concepts/12cdb2deec6dee7b1442dec2f49110ae/concept-scheme"
+                }
+            },
+            "top-concept-of": {
+                "links": {
+                    "self": "/concepts/12cdb2deec6dee7b1442dec2f49110ae/links/top-concept-of",
+                    "related": "/concepts/12cdb2deec6dee7b1442dec2f49110ae/top-concept-of"
+                }
+            }
+        }
+    },
+    "links": {
+        "self": "/trade-activities/cee39b1afd34f2ec536304461134c0a0/links/concerns",
+        "related": "/trade-activities/cee39b1afd34f2ec536304461134c0a0/concerns"
+    }
 }
 ```
 
@@ -87,11 +126,11 @@ HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
 
 {
-  "links": {
-    "self": "/articles/1/relationships/tags",
-    "related": "/articles/1/tags"
-  },
-  "data": []
+    "data": [],
+    "links": {
+        "self": "/trade-activities/cee39b1afd34f2ec536304461134c0a0/links/concerns",
+        "related": "/trade-activities/cee39b1afd34f2ec536304461134c0a0/concerns"
+    }
 }
 ```
 

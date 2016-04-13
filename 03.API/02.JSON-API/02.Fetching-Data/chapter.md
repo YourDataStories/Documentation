@@ -7,6 +7,6 @@ taxonomy:
 # Fetching Data
 
 
-The YDS API documentation!
+Data, including resources and relationships, can be fetched by sending a GET request to an endpoint.
 
-test
+Responses can be further refined with the optional features described in the different subsectors.

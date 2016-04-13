@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-A server **MUST support fetching resource data for every URL provided as:
+A server MUST support fetching resource data for every URL provided as:
 
 + a self link as part of the top-level links object
 + a self link as part of a resource-level links object
@@ -35,16 +35,15 @@ Responses
 
 200 OK
 
-A server **MUST respond to a successful request to fetch an individual resource or resource collection with a ```200 OK``` response.
+A server MUST respond to a successful request to fetch an individual resource or resource collection with a 200 OK response.
 
-A server **MUST respond to a successful request to fetch a resource collection with an array of resource objects or an empty array ([]) as the response document's primary data.
+A server MUST respond to a successful request to fetch a resource collection with an array of resource objects or an empty array ([]) as the response document's primary data.
 
-For example, a **GET request to a collection of trade activities could return:
+For example, a GET request to a collection of trade activities could return:
 
 ```
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
-```
  {
             "attributes": {
                 "financial-year": "2011-01-01Z"
@@ -92,13 +91,13 @@ Content-Type: application/vnd.api+json
   "data": []
 } 
 ```
-A server **MUST respond to a successful request to fetch an individual resource with a resource object or null provided as the response document's primary data.
+A server MUST respond to a successful request to fetch an individual resource with a resource object or null provided as the response document's primary data.
 
 null is only an appropriate response when the requested URL is one that might correspond to a single resource, but doesn't currently.
 
 >>>>> Consider, for example, a request to fetch a to-one related resource link. This request would respond with null when the relationship is empty (such that the link is corresponding to no resources) but with the single related resource's resource object otherwise.
 
-For example, a **GET request to an individual article could return:
+For example, a GET request to an individual article could return:
 ```
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
@@ -122,7 +121,7 @@ Content-Type: application/vnd.api+json
     }
   }
 }```
-If the above article's author is missing, then a **GET request to that related resource would return:
+If the above article's author is missing, then a GET request to that related resource would return:
 ```
 HTTP/1.1 200 OK
 Content-Type: application/vnd.api+json
@@ -135,7 +134,7 @@ Content-Type: application/vnd.api+json
 }```
 404 Not Found
 
-A server **MUST respond with 404 Not Found when processing a request to fetch a single resource that does not exist, except when the request warrants a 200 OK response with null as the primary data (as described above).
+A server MUST respond with 404 Not Found when processing a request to fetch a single resource that does not exist, except when the request warrants a 200 OK response with null as the primary data (as described above).
 
 Other Responses
 

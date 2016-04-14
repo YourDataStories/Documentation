@@ -2,10 +2,10 @@
 title: 'Building a Drupal Module using a YDS Component'
 ---
 
-This section provides some examples regarding the [JSON-LD](http://json-ld.org/) API.
+This tutorial describes the steps to include a YDS component in a Drupal 7 custom module.
+A working example can be seen at [platform.yourdatastories.eu/geo-editing] (http://platform.yourdatastories.eu/geo-editing)
 
-Summary
-=======
+###Summary
 - Prerequites
 - Setup
 - Custom Block
@@ -118,7 +118,7 @@ This file actually includes only the declaration of the angular tag that is goin
 The component's angular template file which is included in the templates folder (templates/geo-editing.html) is going to do all the rest of the angular templating process.
 
 ###Component angular file
-THe js fodler includes the yds-lib.js file which is responsible for the initialisation of the angular application. The geo-editing.js file includes the angular directive for the geo-editing component. The later had to be adapted in order to fix the path to the component's template file. Specifically:
+The js folder includes the yds-lib.js file which is responsible for the initialisation of the angular application. The geo-editing.js file includes the angular directive for the geo-editing component. The later had to be adapted in order to fix the path to the component's template file. Specifically:
 
 ```javascript
 angular.module('yds').directive('ydsGeoEditing', ['Data', '$timeout', function(Data, $timeout){

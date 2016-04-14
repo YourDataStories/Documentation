@@ -4,12 +4,8 @@ taxonomy:
     category: docs
 ---
 
-| Resource Type  | End-point | Notes |
+| Resource Type  | Class | End-point | Notes |
 | --------------- | --------- | ------| -------------|
-| **Catalog**  | dcat:Catalog | /catalogs | Notes |
-| **Dataset**  | dcat:Dataset | /datasets | Notes |
-| **Distribution**  | dcat:Distribution | /distributions | Notes |
-| **Catalog Record**  | dcat:CatalogRecord | /catalog-records | Notes |
 | **Concept**  | skos:Concept | /concepts | Notes |
 | **Concept Scheme**  | skos:ConceptSchemes | /concept-schemes | Notes |
 | **Agent**  | foaf:Agents | /agents | Notes |

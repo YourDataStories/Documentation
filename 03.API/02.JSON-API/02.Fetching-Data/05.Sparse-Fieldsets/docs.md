@@ -10,11 +10,10 @@ The value of the fields parameter MUST be a comma-separated (U+002C COMMA, ",") 
 
 If a client requests a restricted set of fields for a given resource type, an endpoint MUST NOT include additional fields in resource objects of that type in its response.
 
-(```
-GET /trade-activities?include=destination&amount[trade-activities]= HTTP/1.1
+```
+GET /public-projects?fields[public-projects]=project-id HTTP/1.1
 Accept: application/vnd.api+json
-
-```)
+```
 
 >>>>> The above example URI shows unencoded [ and ] characters simply for readability. In practice, these characters must be percent-encoded, per the requirements in RFC 3986.
 

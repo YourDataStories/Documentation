@@ -8,8 +8,6 @@ An endpoint MAY return resources related to the primary data by default.
 
 An endpoint MAY also support an include request parameter to allow the client to customize which related resources should be returned.
 
-If an endpoint does not support the include parameter, it MUST respond with 400 Bad Request to any requests that include it.
-
 If an endpoint supports the include parameter and a client supplies it, the server MUST NOT include unrequested resource objects in the included section of the compound document.
 
 The value of the include parameter MUST be a comma-separated (U+002C COMMA, ",") list of relationship paths. A relationship path is a dot-separated (U+002E FULL-STOP, ".") list of relationship names.
@@ -38,19 +36,9 @@ Accept: application/vnd.api+json
 
 Multiple related resources can be requested in a comma-separated list:
 
-HELP:(
  ```
 GET /trade-activities/800466d9a46544d1759be3cdad6d5fa2?include=concerns,destination.country HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-Furthermore, related resources can be requested from a relationship endpoint:
-
-```
-GET /trade-activities/800466d9a46544d1759be3cdad6d5fa2?include=concerns,destination.country HTTP/1.1
-Accept: application/vnd.api+json
-```
-
-In this case, the primary data would be a collection of resource identifier objects that represent linkage to comments for an article, while the full comments and comment authors would be returned as included data.)
-
->>>>> This section applies to any endpoint that responds with primary data, regardless of the request type. For instance, a server could support the inclusion of related resources along with a POST request to create a resource or relationship.
+>>>>> This section applies to any endpoint that responds with primary data, regardless of the request type. 

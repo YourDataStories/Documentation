@@ -32,7 +32,7 @@ Let's call our module **yds_geo_editing** The standard module files have to be i
  
 Moreover, the component's js and css files should be put in the module's folder structure as seen in the screenshot below
 
-![Module folder structure](http://platform.yourdatastories.eu/sites/default/files/ydsdrupalfolderstructure.PNG)
+![Module folder structure](http://platform.yourdatastories.eu/sites/default/files/yds-folder-structure.PNG)
 
 Finally, the following statement includes the declaration of the angular application
 

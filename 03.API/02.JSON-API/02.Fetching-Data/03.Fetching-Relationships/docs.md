@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-A server MUST support fetching relationship data for every relationship URL provided as a self link as part of a relationship's links object.
+The server supports fetching relationship data for every relationship URL provided as a self link as part of a relationship's links object.
 
 For example, the following request fetches data about a trade activity's concerns:
 
@@ -23,11 +23,11 @@ Accept: application/vnd.api+json
 Responses
 200 OK
 
-A server MUST respond to a successful request to fetch a relationship with a 200 OK response.
+The server responds to a successful request to fetch a relationship with a 200 OK response.
 
-The primary data in the response document MUST match the appropriate value for resource linkage, as described above for relationship objects.
+The primary data in the response document matches the appropriate value for resource linkage, as described above for relationship objects.
 
-The top-level links object MAY contain self and related links, as described above for relationship objects.
+The top-level links object contains self and related links, as described above for relationship objects.
 
 For example, a GET request to a URL from a to-one relationship link could return:
 
@@ -136,15 +136,15 @@ Content-Type: application/vnd.api+json
 
 404 Not Found
 
-A server MUST return 404 Not Found when processing a request to fetch a relationship link URL that does not exist.
+The server returns 404 Not Found when processing a request to fetch a relationship link URL that does not exist.
 
 >>>>> This can happen when the parent resource of the relationship does not exist. For example, when /trade-activities/cee39b1afd34f2ec536304461134c0a0/ does not exist, request to /trade-activities/cee39b1afd34f2ec536304461134c0a0/links/concerns returns 404 Not Found.
 
 If a relationship link URL exists but the relationship is empty, then 200 OK MUST be returned, as described above.
 Other Responses
 
-+ A server MAY respond with other HTTP status codes.
++ The server MAY respond with other HTTP status codes.
 
-+ A server MAY include error details with error responses.
++ The server MAY include error details with error responses.
 
-+ A server MUST prepare responses, and a client MUST interpret responses, in accordance with HTTP semantics.
++ The server prepares responses, and a client interprets responses, in accordance with HTTP semantics.

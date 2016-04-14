@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-A server MUST support fetching resource data for every URL provided as:
+The server supports fetching resource data for every URL provided as:
 
 + a self link as part of the top-level links object
 + a self link as part of a resource-level links object
@@ -35,9 +35,9 @@ Responses
 
 200 OK
 
-A server MUST respond to a successful request to fetch an individual resource or resource collection with a 200 OK response.
+The server responds to a successful request to fetch an individual resource or resource collection with a 200 OK response.
 
-A server MUST respond to a successful request to fetch a resource collection with an array of resource objects or an empty array ([]) as the response document's primary data.
+The server responds to a successful request to fetch a resource collection with an array of resource objects or an empty array ([]) as the response document's primary data.
 
 For example, a GET request to a collection of trade activities could return:
 
@@ -91,7 +91,7 @@ Content-Type: application/vnd.api+json
   "data": []
 } 
 ```
-A server MUST respond to a successful request to fetch an individual resource with a resource object or null provided as the response document's primary data.
+The server responds to a successful request to fetch an individual resource with a resource object or null provided as the response document's primary data.
 
 null is only an appropriate response when the requested URL is one that might correspond to a single resource, but doesn't currently.
 
@@ -158,12 +158,12 @@ Content-Type: application/vnd.api+json
 ```
 404 Not Found
 
-A server MUST respond with 404 Not Found when processing a request to fetch a single resource that does not exist, except when the request warrants a 200 OK response with null as the primary data (as described above).
+The server responds with 404 Not Found when processing a request to fetch a single resource that does not exist, except when the request warrants a 200 OK response with null as the primary data (as described above).
 
 Other Responses
 
-+ A server MAY respond with other HTTP status codes.
++ The server MAY respond with other HTTP status codes.
 
-+ A server MAY include error details with error responses.
++ The server MAY include error details with error responses.
 
-+ A server MUST prepare responses, and a client MUST interpret responses, in accordance with HTTP semantics.
++ The server prepares responses, and the client interprets responses, in accordance with HTTP semantics.

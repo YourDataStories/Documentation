@@ -4,11 +4,11 @@ taxonomy:
     category: docs
 ---
 
-A client MAY request that an endpoint return only specific fields in the response on a per-type basis by including a fields[TYPE] parameter.
+The client MAY request that an endpoint return only specific fields in the response on a per-type basis by including a fields[TYPE] parameter.
 
-The value of the fields parameter MUST be a comma-separated (U+002C COMMA, ",") list that refers to the name(s) of the fields to be returned.
+The value of the fields parameter is a comma-separated (U+002C COMMA, ",") list that refers to the name(s) of the fields to be returned.
 
-If a client requests a restricted set of fields for a given resource type, an endpoint MUST NOT include additional fields in resource objects of that type in its response.
+If the client requests a restricted set of fields for a given resource type, an endpoint does not include additional fields in resource objects of that type in its response.
 
 ```
 GET /public-projects?fields[public-projects]=project-id HTTP/1.1

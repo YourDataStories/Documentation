@@ -3,7 +3,7 @@ title: 'Building a Drupal Module using a YDS Component'
 ---
 
 This tutorial describes the steps to include a YDS component in a Drupal 7 custom module.
-A working example can be seen at [platform.yourdatastories.eu/geo-editing] (http://platform.yourdatastories.eu/geo-editing)
+A working example can be seen [here] (http://platform.yourdatastories.eu/geo-editing)
 
 ###Summary
 - Prerequites

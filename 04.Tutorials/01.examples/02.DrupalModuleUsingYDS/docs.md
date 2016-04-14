@@ -14,7 +14,7 @@ A working example can be seen at [platform.yourdatastories.eu/geo-editing](http:
 
 ### Prerequites
 This tutorial assumes basic knowledge of creating a custom drupal module. You can follow this [tutorial](https://www.drupal.org/node/1074360) for a detailed description of how to setup and deploy a custom module in Drupal 7.
-For the purposes of this tutorial, the YDS [Geo-Editing Component] (http://ydsdev.iit.demokritos.gr/YDS-docs/Components/components/Geo-Editing) will be used. As described in it's documentation, the component is developed using [angular.js] (https://angularjs.org/). Even though knowing how to build an application with angular is not obligatory in order to create the Drupal module, it would be helpful to understand some of the concepts below.
+For the purposes of this tutorial, the YDS [Geo-Editing Component](http://ydsdev.iit.demokritos.gr/YDS-docs/Components/components/Geo-Editing) will be used. As described in it's documentation, the component is developed using [angular.js](https://angularjs.org/). Even though knowing how to build an application with angular is not obligatory in order to create the Drupal module, it would be helpful to understand some of the concepts below.
 
 
 

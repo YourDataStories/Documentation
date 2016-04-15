@@ -4,9 +4,12 @@ taxonomy:
     category: docs
 ---
 
-| Resource Type  | Class                                      | End-point                                       | Notes |
+| Resource Type  | Class                                      | End-point                                        | Notes |
 | --------------- | ------------------------------- | -------------------------------------| -------------|
-| **Concept**  | skos:Concept | /concepts | Countries, Languages, Procedure types, Currencies, HS commodity groups, Activity status types, Aid types, Flow types, Organisation types, Regions, Transaction types, OECD CRS sectors, Kinds, Activity types, Collaboration types, Finance types |
+| **Concept**  | skos:Concept | /concepts | Countries, Languages, Procedure types, Currencies, 
+HS commodity groups, Activity status types, Aid types,
+Flow types, Organisation types, Regions, Transaction types, OECD CRS sectors, 
+Kinds, Activity types, Collaboration types, Finance types |
 | **Concept Scheme**  | skos:ConceptSchemes | /concept-schemes |  |
 | **Agent**  | foaf:Agents | /agents |  |
 | **Aid Activity**  | elod:AidActivity | /aid-activities |  |

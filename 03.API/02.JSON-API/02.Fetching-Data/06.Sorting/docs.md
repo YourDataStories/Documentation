@@ -13,25 +13,25 @@ The server supports requests to sort resource collections according to one or mo
 The endpoint supports requests to sort the primary data with a sort query parameter. The value for sort represents sort fields.
 
 ```
-GET /people?sort=age HTTP/1.1
+GET /aid-activities?sort=title HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
 An endpoint MAY support multiple sort fields by allowing comma-separated (U+002C COMMA, ",") sort fields. Sort fields SHOULD be applied in the order specified.
 
 ```
-GET /people?sort=age,name HTTP/1.1
+GET /aid-activities?sort=title,description 1.1 HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
 The sort order for each sort field is ascending unless it is prefixed with a minus (U+002D HYPHEN-MINUS, "-"), in which case it will be descending.
 
 ```
-GET /articles?sort=-created,title HTTP/1.1
+GET /aid-activities?sort=-title HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-The above example should return the newest articles first. Any articles created on the same date will then be sorted by their title in ascending alphabetical order.
+The above example should return the aid activities sorted in a descending order. 
 
 If the server does not support sorting as specified in the query parameter sort, it MUST return 400 Bad Request.
 

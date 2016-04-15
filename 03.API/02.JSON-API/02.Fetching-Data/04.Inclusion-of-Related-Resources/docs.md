@@ -16,7 +16,7 @@ If the server is unable to identify a relationship path or does not support incl
 
 >>>>> For example, a relationship path could be destination.country, where destination is a relationship listed under a trade activity resource object, and country is a relationship listed under a destination resource object.
 
-For instance, concerns could be requested with a trade activity:
+For instance, a destination could be requested with a trade activity:
 
 ```
 GET trade-activities/800466d9a46544d1759be3cdad6d5fa2?include=destination HTTP/1.1

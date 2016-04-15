@@ -17,7 +17,7 @@ GET /aid-activities?sort=title HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-An endpoint MAY support multiple sort fields by allowing comma-separated (U+002C COMMA, ",") sort fields. Sort fields SHOULD be applied in the order specified.
+An endpoint MAY support multiple sort fields by allowing comma-separated (U+002C COMMA, ",") sort fields. Sort fields will be applied in the order specified.
 
 ```
 GET /aid-activities?sort=title,description 1.1 HTTP/1.1
@@ -31,10 +31,10 @@ GET /aid-activities?sort=-title HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
-The above example should return the aid activities sorted in a descending order. 
+The above example should return the title of the aid activities sorted in a descending order. 
 
-If the server does not support sorting as specified in the query parameter sort, it MUST return 400 Bad Request.
+If the server does not support sorting as specified in the query parameter sort, it will return 400 Bad Request.
 
-If sorting is supported by the server and requested by the client via query parameter sort, the server returns elements of the top-level data array of the response ordered according to the criteria specified. The server MAY apply default sorting rules to top-level data if request parameter sort is not specified.
+If sorting is supported by the server and requested by the client via query parameter sort, the server returns elements of the top-level data array of the response ordered according to the criteria specified. The server will apply default sorting rules to top-level data if request parameter sort is not specified.
 
 >>>>> This section applies to any endpoint that responds with a resource collection as primary data, regardless of the request type.

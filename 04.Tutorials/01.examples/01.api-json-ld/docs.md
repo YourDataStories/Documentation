@@ -54,6 +54,12 @@ The JSON-LD API provides also access to search (implemented through an [Apache S
 | Plot the amount of related financial decisions over time for project id:<br>http://linkedeconomy.org/resource/Subsidy/519339 | component/linechart.tcl, **type=project.decisions.financial.amount.over.date**, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/linechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=en&type=project.decisions.financial.amount.over.date> |
 | Plot number of related financial decisions over time for project id:<br>http://linkedeconomy.org/resource/Subsidy/519339 | component/linechart.tcl, **type=project.decisions.financial.decisions.over.date**, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/linechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=el&type=project.decisions.financial.decisions.over.date> |
 
+### API for Component: **HeatMap**
+| Action (HeatMap Component) | API Call |
+|-------------------------|----------|
+| List the two countries (benefactor and beneficiary) of Aid Activity with id:<br><http://linkedeconomy.org/resource/AidActivity/NL-1-PPR-10036> | component/heatmap.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/heatmap.tcl?id=http://linkedeconomy.org/resource/AidActivity/NL-1-PPR-11839> |
+
+
 ### API for Model Information
 | Action | API Call |
 |--------|----------|

@@ -8,7 +8,7 @@ The server supports requests to sort resource collections according to one or mo
 
 >>>>> Although recommended, sort fields do not necessarily need to correspond to resource attribute and association names.
 
->>>>> It is recommended that dot-separated (U+002E FULL-STOP, ".") sort fields be used to request sorting based upon relationship attributes. For example, a sort field of author.name could be used to request that the primary data be sorted based upon the name attribute of the author relationship.
+>>>>> It is recommended that dot-separated (U+002E FULL-STOP, ".") sort fields be used to request sorting based upon relationship attributes. For example, a sort field of public-project.title could be used to request that the primary data be sorted based upon the title attribute of the public project relationship.
 
 The endpoint supports requests to sort the primary data with a sort query parameter. The value for sort represents sort fields.
 

@@ -14,21 +14,21 @@ For example, the following request fetches a collection of trade activities:
 
 ```
 GET /api/mudcat/trade-activities HTTP/1.1
-Host: ydsdev.iit.demokritos.gr
+Host: platform.yourdatastories.eu
 ```
 
 The following request fetches a trade activity:
 
 ```
 GET /api/mudcat/trade-activities/800466d9a46544d1759be3cdad6d5fa2 HTTP/1.1
-Host: ydsdev.iit.demokritos.gr
+Host: platform.yourdatastories.eu
 ```
 
 And the following request fetches the origin of a trade activity:
 
 ```
 GET /api/mudcat/trade-activities HTTP/800466d9a46544d1759be3cdad6d5fa2/origin
-Host: ydsdev.iit.demokritos.gr
+Host: platform.yourdatastories.eu
 ```
 
 Responses

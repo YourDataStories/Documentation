@@ -4,74 +4,52 @@ title: 'Using YDS Advanced Search'
 
 This section provides some examples on how to use the advanced search facilities provided by the [YourDataStories](http://platform.yourdatastories.eu/content/tabbed-search) (YDS) application. A series of "tabs" are presented to the user, representing categories of data available through the YDS platform. Each "tab" has a search field, where the user can use to perform searches within the category represented by the "tab".
 
+In order to access the advanced search, the user has to click on the link "Show Advanced Search", just below the "Search" button:
+
+[![Show Advanced Search](images/AdvancedSearch.png)](http://platform.yourdatastories.eu/content/tabbed-search#?tab=PublicProject)
 
 
-regarding the [JSON-LD](http://json-ld.org/) API.
+After "Show Advanced Search" is clicked, a new graphical element (UI) will appear, similar to the following one:
 
-### API for Search
-The JSON-LD API provides also access to search (implemented through an [Apache Solr](http://lucene.apache.org/solr/) server), altough the results are **not** in JSON-LD (as results are provided directly from the Solr server in JSON format).
+![Advanced Search UI](images/AdvancedSearchUI.png)
 
-| Action (Search) | API Call |
-|-----------------|----------|
-| Search with **"Ηρακλειο"** (a misspelled version of the Greek city "Ηράκλειο") | component/search.tcl, q=Ηρακλειο<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=Ηρακλειο> |
-| Search with "Ηρακλειο" with facet **"Subsidy"** | component/search.tcl, q=Ηρακλειο, fq=type:Subsidy<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=Ηρακλειο&fq=type:Subsidy> |
-| List all **"Subsidy"**s | component/search.tcl, q=*:*, fq=type:Subsidy<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:Subsidy> |
-| List all **"FinancialDecision"**s | component/search.tcl, q=*:*, fq=type:FinancialDecision<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:FinancialDecision> |
-| List all **"NonFinancialDecision"**s | component/search.tcl, q=*:*, fq=type:NonFinancialDecision<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:NonFinancialDecision> |
-| List all **"Decision"**s | component/search.tcl, q=*:*, fq=type:Decision<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:Decision> |
-| List all **"Contract"**s | component/search.tcl, q=*:*, fq=type:Contract<br><http://platform.yourdatastories.eu/api/json-ld/component/search.tcl?q=*:*&fq=type:Contract> |
+Through this graphical element you can create a set of "rules", which can be grouped, and connected with logical operators (such as "AND", "OR", "NOT") to form a complex logical expression, which can be used for searching within the data category represented by the "tab".
 
+## Operator examples
 
-### API for Component: **grid**
-| Action (Grid Component) | API Call |
-|-------------------------|----------|
-| Get project with id (**Greek**): <http://linkedeconomy.org/resource/Subsidy/519339> | component/grid.tcl, **type=project**, **lang=el**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project&lang=el> |
-| Get project with id (**English**): <http://linkedeconomy.org/resource/Subsidy/519339> | component/grid.tcl, **type=project**, **lang=en**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project&lang=en> |
-| Get project with id (**all available languages**): <http://linkedeconomy.org/resource/Subsidy/519339> | component/grid.tcl, **type=project**, **lang=i18n**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project&lang=i18n> |
-| Get **types** (facets) supported by grids for id: <http://linkedeconomy.org/resource/Subsidy/519339> (Types depend on the classes of the provided id) | component/grid.tcl**/types**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl/types?id=http://linkedeconomy.org/resource/Subsidy/519339> |
-| Get **related projects** of project with id: <http://linkedeconomy.org/resource/Subsidy/519339> | component/grid.tcl, **type=project.related.projects**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project.related.projects> |
-| Get related **decisions** of project with id: <http://linkedeconomy.org/resource/Subsidy/519339> | component/grid.tcl, **type=project.decisions**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project.decisions> |
-| Get related **financial** decisions of project with id: <http://linkedeconomy.org/resource/Subsidy/519339> | component/grid.tcl, **type=project.decisions.financial**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project.decisions.financial> |
-| Get related **non-financial** decisions of project with id: <http://linkedeconomy.org/resource/Subsidy/519339> | component/grid.tcl, **type=project.decisions.non_financial**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/grid.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&type=project.decisions.non_financial> |
+When the value is of a string type, the following _wildcard_ characters can be used:
 
-### API for Component: **info**
-| Action (Info Component) | API Call |
-|-------------------------|----------|
-| Get information about resource with id:<br><http://linkedeconomy.org/resource/Subsidy/519339> | component/info.tcl, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/info.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339> |
+| Wildcard Search Type | Special Character | Example |
+|----------------------|-------------------|---------|
+| Single character (matches a single character) | ? | The search string __te\?t__ would match both test and text. [[\*]](https://cwiki.apache.org/confluence/display/solr/The+Standard+Query+Parser)|
+| Multiple characters (matches zero or more sequential characters) | \* | The wildcard search __tes\*__ would match 'test', 'testing', and 'tester'. You can also use wildcard characters in the middle of a term. For example: __te\*t__ would match 'test' and 'text'. __\*est__ would match 'pest' and 'test'. [[\*]](https://cwiki.apache.org/confluence/display/solr/The+Standard+Query+Parser)|
 
-### API for Component: **map**
-| Action (Map Component) | API Call |
-|-------------------------|----------|
-| Get the route of project id:<br><http://linkedeconomy.org/resource/Subsidy/519339> | component/map.tcl, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/map.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=en> |
+The following table presents some examples for any operator offered by advanced search:
 
-### API for Component: **Pie Chart**
-| Action (Pie Chart Component) | API Call |
-|-------------------------|----------|
-| Get **types** (facets) supported by pie charts for id:<br><http://linkedeconomy.org/resource/Subsidy/519339> (Types depend on the classes of the provided id) | component/piechart.tcl**/types**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/piechart.tcl/types?id=http://linkedeconomy.org/resource/Subsidy/519339> |
-| Get related financial decisions for project id:<br><http://linkedeconomy.org/resource/Subsidy/519339> | component/piechart.tcl, type=project.decisions.financial, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/piechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=en&type=project.decisions.financial> |
-| Get related non-financial decisions for project id:<br><http://linkedeconomy.org/resource/Subsidy/519339> | component/piechart.tcl, type=project.decisions.non_financial, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/piechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=el&type=project.decisions.non_financial> |
-
-### API for Component: **Line Chart**
-| Action (Line Chart Component) | API Call |
-|-------------------------|----------|
-| Get **types** (facets) supported by line charts for id:<br><http://linkedeconomy.org/resource/Subsidy/519339> (Types depend on the classes of the provided id) | component/linechart.tcl**/types**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/linechart.tcl/types?id=http://linkedeconomy.org/resource/Subsidy/519339> |
-| Plot the amount of related financial decisions over time for project id:<br><http://linkedeconomy.org/resource/Subsidy/519339> | component/linechart.tcl, **type=project.decisions.financial.amount.over.date**, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/linechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=en&type=project.decisions.financial.amount.over.date> |
-| Plot number of related financial decisions over time for project id:<br><http://linkedeconomy.org/resource/Subsidy/519339> | component/linechart.tcl, **type=project.decisions.financial.decisions.over.date**, lang=..., id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/linechart.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339&lang=el&type=project.decisions.financial.decisions.over.date> |
-
-### API for Component: **HeatMap**
-| Action (HeatMap Component) | API Call |
-|-------------------------|----------|
-| List the two countries (benefactor and beneficiary) of Aid Activity with id:<br><http://linkedeconomy.org/resource/AidActivity/NL-1-PPR-10036> | component/heatmap.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/component/heatmap.tcl?id=http://linkedeconomy.org/resource/AidActivity/NL-1-PPR-11839> |
+| Operator | value type: **string** | value type: **numerical** |
+|----------|------------------------|---------------------------|
+| __equal__    | If value is a single word, it can have wildcard characters. For example, __YourData\*__ will match 'YourDataStories'. In order to match the character '\*', you can use double quotes: "YourData\*" will match only 'YourData\*'.If value contains more than one words, separated by space, wildcard characters cannot be used (they are treated as normal characters, loosing their "wildcard"-iness).| A numerical value, such as __10__ or __3.14__ is expected. |
+| __less__     | Not applicable. | Any numerical value, date, or time. The value is **excluded** from the results, i.e. data that match the value are not returned. |
+| __less or equal__ | Not applicable. | Any numerical value, date, or time. The value is **included** in the results, i.e. data that match the value are returned. |
+| **greater**     | Not applicable. | Any numerical value, date, or time. The value is **excluded** from the results, i.e. data that match the value are not returned. |
+| **greater or equal** | Not applicable. | Any numerical value, date, or time. The value is **included** in the results, i.e. data that match the value are returned. |
+| **between** | Not applicable. | Any two numerical values, dates, or times. The values are **included** in the results, i.e. the matched data are in the range **[value1, value2]**. |
+| **begins with** | The value should be a single word, where the wildcard "\*" is added at the begining of the value. For example, "est" becomes "\*est". | Not applicable. |
+| **ends with** | The value should be a single word, where the wildcard "\*" is appended at the end of the value. For example, "tes" becomes "tes\*". | Not applicable. |
+| **contains** | One or more words (separated by spaces) are expected. All words must exist in the data in order to be matched, but each word does not need to appear next to the rest of the words. For example, "a the", will match data that contain both "a" and "the", in any position in the filed value. | Not applicable. |
+| **is empty** | No value is expected. Matches the empty string. | Not applicable. |
 
 
-### API for Model Information
-| Action | API Call |
-|--------|----------|
-| Get a list of all classes, their properties, and property types: | model/classes.tcl<br><http://platform.yourdatastories.eu/api/json-ld/model/classes.tcl> |
-| Get a list of all their properties and their types for class **"PublicProject"**:<br><http://linkedeconomy.org/ontology#PublicProject> | model/class.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/class.tcl?id=http://linkedeconomy.org/ontology%23PublicProject> |
-| Get a list of all their properties and their types for class **"Subsidy"**:<br><http://linkedeconomy.org/ontology#Subsidy> | model/class.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/class.tcl?id=http://linkedeconomy.org/ontology%23Subsidy> |
-| Describe **object** (type: Subsidy):<br><http://linkedeconomy.org/resource/Subsidy/519339> | model/describe.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/describe.tcl?id=http://linkedeconomy.org/resource/Subsidy/519339> |
-| Describe **object** (type: CommittedItem):<br><http://linkedeconomy.org/resource/CommittedItem/456Ζ7ΛΚ-ΚΚΙ> | model/describe.tcl, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/describe.tcl?id=http://linkedeconomy.org/resource/CommittedItem/456Ζ7ΛΚ-ΚΚΙ> |
-| Describe **object** in a **compact form** (type: Subsidy):<br><http://linkedeconomy.org/resource/Subsidy/519339> | model/describe.tcl, **compact=1**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/describe.tcl?compact=1&id=http://linkedeconomy.org/resource/Subsidy/519339> |
-| Describe **object** in a **compact form** (type: CommittedItem):<br><http://linkedeconomy.org/resource/CommittedItem/456Ζ7ΛΚ-ΚΚΙ> | model/describe.tcl, **compact=1**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/describe.tcl?compact=1&id=http://linkedeconomy.org/resource/CommittedItem/456Ζ7ΛΚ-ΚΚΙ> |
-| Describe **object** in a **compact form** (type: AidActivity):<br><http://linkedeconomy.org/resource/AidActivity/NL-1-PPR-10040> | model/describe.tcl, **compact=1**, id=...<br><http://platform.yourdatastories.eu/api/json-ld/model/describe.tcl?compact=1&id=http://linkedeconomy.org/resource/AidActivity/NL-1-PPR-10040&context=0> |
+| Negation Operators | These operators are identical to the corresponding operators, but they negate the returned result |
+|--------------------|--------------------------------------------------------|
+| **not equal** | Identical to operator __equal__, but data that do not match the rule are returned. |
+| **not between** | Identical to operator __between__, but data that do not match the rule are returned. |
+| **not begins with** | Identical to operator __begins with__, but data that do not match the rule are returned. |
+| **not ends with** | Identical to operator __ends with__, but data that do not match the rule are returned. |
+| **not contains** | Identical to operator __contains__, but data that do not match the rule are returned. |
+| **is not empty** | Identical to operator __is empty__, but data that do not match the rule are returned. |
+
+
+### References
+
+The YDS Advanced Search is based on [Query Builder](http://querybuilder.js.org/).

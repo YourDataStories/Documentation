@@ -39,8 +39,9 @@ The following table presents some examples for any operator offered by advanced 
 | **contains** | One or more words (separated by spaces) are expected. All words must exist in the data in order to be matched, but each word does not need to appear next to the rest of the words. For example, "a the", will match data that contain both "a" and "the", in any position in the filed value. | Not applicable. |
 | **is empty** | No value is expected. Matches the empty string. | Not applicable. |
 
+The follwoing operators are identical to the corresponding operators already described, but they negate the returned result: Everything that does not match is returned.
 
-| Negation Operators | These operators are identical to the corresponding operators, but they negate the returned result |
+| Negation Operators |  |
 |--------------------|--------------------------------------------------------|
 | **not equal** | Identical to operator __equal__, but data that do not match the rule are returned. |
 | **not between** | Identical to operator __between__, but data that do not match the rule are returned. |

@@ -8,6 +8,10 @@ taxonomy:
 | --------------- | ------------------------------- | -------------------------------------| -------------|
 | **Concept**  | skos:Concept | /concepts | Countries, Languages, Procedure types, Currencies, HS commodity groups, Activity status types, Aid types, Flow types, Organisation types, Regions, Transaction types, OECD CRS sectors, Kinds, Activity types, Collaboration types, Finance types |
 | **Concept Scheme**  | skos:ConceptSchemes | /concept-schemes |  |
+| **Catalog**  | dcat:Catalog | /catalogs |  |
+| **Dataset**  | dcat:Dataset | /datasets |  |
+| **Distribution**  | dcat:Distribution | /distributions |  |
+| **Catalog Record**  | dcat:CatalogRecord | /catalog-records |  |
 | **Agent**  | foaf:Agents | /agents |  |
 | **Aid Activity**  | elod:AidActivity | /aid-activities |  |
 | **Public Project**  | elod:PublicProject | /public-projects |  |
@@ -20,7 +24,6 @@ taxonomy:
 | **Amount**  | elod:Amount | /amounts |  |
 | **KAE Code**  | elod:KAE | /kae-codes |  |
 | **Address**  | vcard:Address | /addresses |  |
-| **CPV code**  | elod:CPV | /cpv-codes |  |
 | **Expense Approval Item**  | elod:ExpenseApprovalItem | /expense-approval-items |  |
 | **Financial Decision**  | elod:FinancialDecision | /financial-decisions |  |
 | **Committed Item**  | elod:CommittedItem | /committed-items |  |
@@ -32,9 +35,6 @@ taxonomy:
 | **Non financial Decision**  | elod:NonFinancialDecision | /non-financial-decisions |  |
 | **Group National Agent**  | elod:GroupNationalAgent | /group-national-agents |  |
 | **Trade Activity**  | elod:TradeActivity | /trade-activities |  |
-| **Decision Status**  | skos:Concept | /decision-statuses |  |
-| **Budget Category**  | skos:Concept | /budget-categories |  |
-| **Thematic Category**  | skos:Concept | /thematic-categories |  |
 | **Collective Body Type**  | skos:Concept | /collective-body-types |  |
 | **Collective Body Kind**  | skos:Concept | /collective-body-kinds |  |
 | **Regulatory Act**  | elod:RegulatoryAct | /regulatory-acts |  |
@@ -47,10 +47,19 @@ taxonomy:
 | **Fek Type**  | elod:FekType | /fek-types |  |
 | **Award Criteria Combination**  | pc:AwardCriteriaCombination | /award-criteria-combinations |  |
 | **Criterion Weighting**  | pc:CriterionWeighting | /criteria-weighting |  |
-| **Registered Organization**  | rov:RegisteredOrganization | /registered-organizations |  |
-| **Business Entity**  | gr:BusinessEntity | /business-entities |  |
 | **Transaction**  | elod:Transaction | /transactions |  |
+| **Vat Type**  | elod:VatType | /vat-types |  |
+| **Organizational Unit Category**  | elod:OrganizationalUnitCategory | /organizational-unit-categories |  |
 | **Disbursed Item**  | elod:DisbursedItem | /disbursed-items |  |
+| **Organization Domain**  | elod:OrganizationDomain | /organization-domains |  |
+| **Role**  | elod:Role | /roles |  |
+| **Organization Category**  | elod:OrganizationCategory | /organization-categories |  |
+| **Organization Status**  | elod:OrganizationStatus | /organization-statuses |  |
+| **Person**  | foaf:Person | /persons |  |
+| **Organizational Unit**  | elod:OrganizationalUnit | /organizational-units |  |
+| **Postal Code Area**  | elodgeo:PostalCodeArea | /postal-code-areas |  |
+| **Municipality**  | elodgeo:Municipality | /municipalities |  |
+| **Statistical Indicator**  | elod:StatisticalIndicator | /statistical-indicators |  |
 
 
 

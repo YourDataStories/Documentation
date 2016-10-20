@@ -20,14 +20,14 @@ Host: platform.yourdatastories.eu
 The following request fetches a trade activity:
 
 ```
-GET /api/mudcat/trade-activities/800466d9a46544d1759be3cdad6d5fa2 HTTP/1.1
+GET /api/mudcat/trade-activities/4b8f1a8889220d228a0a9e39a3bbd6e3 HTTP/1.1
 Host: platform.yourdatastories.eu
 ```
 
 And the following request fetches the origin of a trade activity:
 
 ```
-GET /api/mudcat/trade-activities HTTP/800466d9a46544d1759be3cdad6d5fa2/origin
+GET /api/mudcat/trade-activities/4b8f1a8889220d228a0a9e39a3bbd6e3/origin
 Host: platform.yourdatastories.eu
 ```
 

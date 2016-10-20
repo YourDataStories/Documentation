@@ -9,14 +9,14 @@ The server supports fetching relationship data for every relationship URL provid
 For example, the following request fetches data about a trade activity's concerns:
 
 ```
-GET /trade-activities/800466d9a46544d1759be3cdad6d5fa2/concerns HTTP/1.1
+GET /trade-activities/4b8f1a8889220d228a0a9e39a3bbd6e3/concerns HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
 And the following request fetches data about a trade activity's destination:
 
 ```
-GET/trade-activities/800466d9a46544d1759be3cdad6d5fa2/destination HTTP/1.1
+GET/trade-activities/4b8f1a8889220d228a0a9e39a3bbd6e3/destination HTTP/1.1
 Accept: application/vnd.api+json
 ```
 

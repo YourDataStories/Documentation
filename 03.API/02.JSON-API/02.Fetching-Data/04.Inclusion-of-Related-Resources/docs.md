@@ -19,14 +19,14 @@ If the server is unable to identify a relationship path or does not support incl
 For instance, a destination could be requested with a trade activity:
 
 ```
-GET trade-activities/800466d9a46544d1759be3cdad6d5fa2?include=destination HTTP/1.1
+GET trade-activities/4b8f1a8889220d228a0a9e39a3bbd6e3?include=destination HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
 In order to request resources related to other resources, a dot-separated path for each relationship name can be specified:
 
 ```
-GET trade-activities/800466d9a46544d1759be3cdad6d5fa2?include=destination.country HTTP/1.1
+GET trade-activities/4b8f1a8889220d228a0a9e39a3bbd6e3?include=destination.country HTTP/1.1
 Accept: application/vnd.api+json
 ``` 
 
@@ -37,7 +37,7 @@ Accept: application/vnd.api+json
 Multiple related resources can be requested in a comma-separated list:
 
  ```
-GET /trade-activities/800466d9a46544d1759be3cdad6d5fa2?include=concerns,destination.country HTTP/1.1
+GET /trade-activities/4b8f1a8889220d228a0a9e39a3bbd6e3?include=concerns,destination.country HTTP/1.1
 Accept: application/vnd.api+json
 ```
 

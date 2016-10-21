@@ -20,7 +20,7 @@ Accept: application/vnd.api+json
 An endpoint MAY support multiple sort fields by allowing comma-separated (U+002C COMMA, ",") sort fields. Sort fields will be applied in the order specified.
 
 ```
-GET /aid-activities?sort=title,description 1.1 HTTP/1.1
+GET /aid-activities?sort=title,description HTTP/1.1
 Accept: application/vnd.api+json
 ```
 

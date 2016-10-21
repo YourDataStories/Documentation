@@ -16,12 +16,14 @@ Accept: application/vnd.api+json
 And the following request fetches data about a trade activity's destination:
 
 ```
-GET/trade-activities/4b8f1a8889220d228a0a9e39a3bbd6e3/destination HTTP/1.1
+GET /trade-activities/4b8f1a8889220d228a0a9e39a3bbd6e3/destination HTTP/1.1
 Accept: application/vnd.api+json
 ```
 
+```
 Responses
 200 OK
+```
 
 The server responds to a successful request to fetch a relationship with a 200 OK response.
 
@@ -134,7 +136,9 @@ Content-Type: application/vnd.api+json
 }
 ```
 
+```
 404 Not Found
+```
 
 The server returns 404 Not Found when processing a request to fetch a relationship link URL that does not exist.
 

@@ -151,4 +151,5 @@ Other Responses
 
 + The server MAY include error details with error responses.
 
+test
 + The server prepares responses, and a client interprets responses, in accordance with HTTP semantics.

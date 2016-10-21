@@ -27,7 +27,7 @@ Host: platform.yourdatastories.eu
 And the following request fetches the origin of a trade activity:
 
 ```
-GET /api/mudcat/trade-activities/4b8f1a8889220d228a0a9e39a3bbd6e3/origin
+GET /api/mudcat/trade-activities/4b8f1a8889220d228a0a9e39a3bbd6e3/origin HTTP/1.1
 Host: platform.yourdatastories.eu
 ```
 

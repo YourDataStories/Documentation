@@ -33,7 +33,9 @@ Host: platform.yourdatastories.eu
 
 Responses
 
+```
 200 OK
+```
 
 The server responds to a successful request to fetch an individual resource or resource collection with a 200 OK response.
 
@@ -156,7 +158,10 @@ Content-Type: application/vnd.api+json
   "data": null
 }
 ```
+
+```
 404 Not Found
+```
 
 The server responds with 404 Not Found when processing a request to fetch a single resource that does not exist, except when the request warrants a 200 OK response with null as the primary data (as described above).
 

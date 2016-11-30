@@ -21,7 +21,7 @@ provided by the user.
 > **Example Usage:**
 
 ```html
-<div yds-search></div>
+<yds-search></yds-search>
 ```
 
 > **Screenshot:**
@@ -40,7 +40,7 @@ options and a new result set is retrieved.
 > **Example Usage:**
 
 ```html
-<div yds-facets></div>
+<yds-facets></yds-facets>
 ```
 
 > **Screenshot:**
@@ -61,7 +61,7 @@ useful conclusions around the dataset.
 > **Example Usage:**
 
 ```html
-<div yds-results></div>
+<yds-results></yds-results>
 ```
 
 > **Screenshot:**

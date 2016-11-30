@@ -4,19 +4,27 @@ taxonomy:
     category: docs
 ---
 
-The YDS Visualisation library depends on a number of trird party libraries such as AngularJS, Hicharts etc. Below you will find a complete list with its dependencies.
+The YDS Visualisation library depends on a number of third party libraries such as AngularJS, Hicharts etc. Below you will find a complete list with its dependencies.
 
 
 ##### List of required dependencies:
 
 + AngularJS (v1.4.7)
-+ Bootstrap (v0.14.3)
-+ ag-Grid (v2.3.5)
-+ Highstock (v2.1.9)
-+ Highmaps (v1.1.9)
++ Angular Bootstrap (v2.1.3)
++ AngularJS Slider (v2.8.0)
++ Angular Bootstrap Checkbox
++ ng-text-truncate
++ ag-Grid (v3.3.3)
++ Highstock (v4.2.6)
++ Highstock exporting module (v4.2.6)
++ Highmaps (v4.2.6)
++ Highcharts treemap module (v4.2.6)
++ Highcharts-more module (v4.2.6)
 + LeafletJS (v0.7.7)
 + UnderscoreJS (v1.8.3)
 + oclazyload (v1.0.8)
++ JSURL library by Sage
++ MD5 algorithm by Greg Holt
 
 >>>> For an unobstructive installation process, avoid to include lower versions of the aforementioned libraries.
 
@@ -59,7 +67,7 @@ The YDS Visualisation library depends on a number of trird party libraries such 
 <script src="js/yds-lib.js"></script>
 ```
 
-**Step 3: **Inject the YDS module inside you AngularJS application (app.js):
+**Step 3: **Inject the YDS module inside your AngularJS application (app.js):
 ```js
 var ydsDemo = angular.module('ydsDemo', ['yds']);
 ```

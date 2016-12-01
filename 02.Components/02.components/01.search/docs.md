@@ -16,13 +16,22 @@ The 'Basic Search' component of the YourDataStories platform is conceived with a
 minimal design, towards simplicity and ease of use. The component is composed of
 a simple search box and a simple button on the right side of it. The core idea is
 the ability to provide results upon any search query (e.g. VAT id, organization name)
-provided by the user.
+provided by the user. It also supports displaying search suggestions to the user
+as they type in the text field, with a customizable amount of suggestions.
 
 > **Example Usage:**
 
 ```html
 <yds-search></yds-search>
 ```
+
+> **Input Values:**
+
+| Input  | Description |
+| ------ | ----------- |
+| **lang** | Language of the component's interface |
+| **max-suggestions** | Maximum amount of suggestions to show in the suggestions dropdown (Default: 15) |
+| **standalone** | Boolean attribute, set to true if you want the search results to be shown in a new page instead of directly under the search bar. (Default: false) |
 
 > **Screenshot:**
 
@@ -42,6 +51,12 @@ options and a new result set is retrieved.
 ```html
 <yds-facets></yds-facets>
 ```
+
+> **Input Values:**
+
+| Input  | Description |
+| ------ | ----------- |
+| **lang** | Language of the displayed filter labels |
 
 > **Screenshot:**
 
@@ -63,6 +78,12 @@ useful conclusions around the dataset.
 ```html
 <yds-results></yds-results>
 ```
+
+> **Input Values:**
+
+| Input  | Description |
+| ------ | ----------- |
+| **lang** | Language of the displayed results |
 
 > **Screenshot:**
 

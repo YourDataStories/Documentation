@@ -187,7 +187,7 @@ The library is extended in the context of the YDS platform to support embed func
 
 ![Bar Chart Component](/user/images/bar.jpg)
 
-##### 4. Pie Chart Component:
+##### 5. Pie Chart Component:
 
 The 'Pie Chart' component is based on the Highcharts JavaScript library, a library for creating pie plots for visualizing data.
 A pie chart is a circular chart divided into sectors which is proportional to the quantity it represents. The library comes with a handful of visualization features, such as:
@@ -234,7 +234,7 @@ The component is extended in the context of the YDS platform to support embed fu
 
 ![Pie Chart Component](/user/images/pie.jpg)
 
-##### 5. Grid Component:
+##### 6. Grid Component:
 
 The 'Grid' component is based on the ag-Grid JavaScript library , a powerful library for
 creating data grids with large volumes of data. Users are able to navigate with ease through
@@ -287,7 +287,7 @@ users have the ability to reorder and resize the columns of the grid according t
 
 ![Grid Component](/user/images/grid.jpg)
 
-##### 6. Scatter Chart Component:
+##### 7. Scatter Chart Component:
 
 The scatter chart component is based on the Highcharts visualization library. It works in a similar way to the line chart component, but instead of displaying the data as a line, it is shown as individual points.
 
@@ -326,7 +326,7 @@ The scatter chart component is based on the Highcharts visualization library. It
 
 ![Scatter Chart Component](/user/images/scatter.jpg)
 
-##### 7. Bubble Chart Component:
+##### 8. Bubble Chart Component:
 
 The Bubble Chart component is based on the Highcharts visualization library. It shows a type of chart that can display data with 3 dimensions via each data point's x, y axis positions and its size.
 
@@ -364,9 +364,9 @@ The Bubble Chart component is based on the Highcharts visualization library. It 
 
 ![Bubble Chart Component](/user/images/bubble.jpg)
 
-##### 8. Tree Map Component:
+##### 9. Tree Map Component:
 
-The tree map component displays each point of data as a rectange. Each rectangle's size represents the size of its value relative to the other data points. This component also has drill-down functionality for data with multiple levels. 
+The tree map component displays each point of data as a rectange. Each rectangle's size represents the size of its value relative to the other data points. This component also has drill-down functionality for data with multiple levels.
 
 
 > **Example Usage:**

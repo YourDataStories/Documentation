@@ -8,7 +8,7 @@ process:
 
 The Search functionality of the YDS Platform is based on three different
 components which are connected with each other. In order for the YDS Search to
-operate properly, all the search components must be placed in the same page. 
+operate properly, all the search components must be placed in the same page.
 
 ##### 1. Basic Search Component:
 
@@ -32,6 +32,9 @@ as they type in the text field, with a customizable amount of suggestions.
 | **lang** | Language of the component's interface |
 | **max-suggestions** | Maximum amount of suggestions to show in the suggestions dropdown (Default: 15) |
 | **standalone** | Boolean attribute, set to true if you want the search results to be shown in a new page instead of directly under the search bar. (Default: false) |
+| **tabbed** | Boolean attribute, set to true when the Basic Search component is used in the Tabbed Search (explained in more detail on the next page). It enables Advanced Search, however you must also set the **concept** and **concept-id** attributes. Setting **standalone** and **tabbed** to true at the same time is not supported. |
+| **concept-id** | String attribute, needed only for Tabbed Search. Defines the ID of the concept that the Advanced Search should use to get the available filters from the API. |
+| **concept** | String attribute, needed only for Tabbed Search. Defines the name of the concept that the Advanced Search will get rules for. |
 
 > **Screenshot:**
 

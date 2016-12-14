@@ -8,7 +8,7 @@ process:
 
 The Tabbed Search is a way to view and search the data of the YDS Platform in a different way. Instead of searching with just a search keyword and limiting the results to specific concepts, in Tabbed Search the user selects a concept from the ones that are available in order to view all the results available in it. They can search within that concept by using keywords and the Advanced Search, which is a way to create more complex queries with a graphical user interface. In the Advanced Search, multiple plugins are available to make the input of values easier for the user.
 
-##### 1. Search Tabs Component
+##### 1. Search Tabs Component:
 
 The 'Search Tabs' component combines all the components required for the tabbed search interface into one simple to use component:
 

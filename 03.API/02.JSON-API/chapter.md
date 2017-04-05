@@ -8,7 +8,4 @@ taxonomy:
 
 # JSON API
 
-
-The YDS API documentation!
-
-test
+The JSON-API compliant YDS API.

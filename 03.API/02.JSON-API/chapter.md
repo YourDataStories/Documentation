@@ -8,4 +8,4 @@ taxonomy:
 
 # JSON API
 
-The JSON-API compliant YDS API.
+The JSON-API specification compliant YDS API.

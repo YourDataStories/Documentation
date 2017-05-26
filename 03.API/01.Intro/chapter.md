@@ -10,5 +10,3 @@ taxonomy:
 
 
 The YDS API documentation!
-
-test

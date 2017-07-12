@@ -151,7 +151,6 @@ The Grid Results component is based on ag-Grid and shows results in a grid forma
 | **lang** | Language of the displayed results |
 | **url-param-prefix** | String attribute, defines a prefix to add to all URL parameters that the component will use. Default is to use no prefix at all. |
 | **use-grid-api** | Normally, the Grid Results component uses the Search API. Set this to true to make it use the Grid API instead. This can be used if you want to simply show some data that is normally shown by the Grid component, but you also want the "View" button of Grid Results to give the option to show more information about the displayed results. (Default: false) |
-| **number-of-items** |  |
 | **sorting** | Boolean attribute, which enables or disables server-side sorting of the data. When enabled, sorting is only allowed in columns that the server allows it. |
 | **quick-filtering** | Boolean attribute, which enables or disables quick filtering. Quick filtering for this component is done server-side. (Default: false) |
 | **col-resize** | Boolean attribute, which defines if the grid will allow the user to resize the columns. (Default: false) |

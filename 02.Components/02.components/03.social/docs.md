@@ -26,8 +26,9 @@ The Related Items component is used to show a number of related items about a pr
 | Input  | Description |
 | ------ | ----------- |
 | **project-id** | ID of the project to show items for. |
+| **period** | Set the time period of the related items to display. Accepted values: "before", "during" and "after" the project.  |
 | **element-h** | Height of the component in pixels. Default is 150 pixels. |
-
+| **total-items** | The component will save the number of total items in this parameter's value (in case you want to display it outside of the component in your page). |
 
 > **Screenshot:**
 

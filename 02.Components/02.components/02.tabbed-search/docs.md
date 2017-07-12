@@ -126,7 +126,6 @@ The Concept Description component is a simple component used in the Tabbed Searc
 
 The Grid Results component is based on ag-Grid and shows results in a grid format. It supports infinite scrolling and server-side sorting on the columns that the server allows it. In Tabbed Search it displays the search results, however it can also be used standalone. On every result, there is a "View" button, which will show more information about the result. The component also supports exporting up to 5.000 results to a CSV file.
 
-
 > **Example Usage:**
 
 ```html
@@ -152,21 +151,24 @@ The Grid Results component is based on ag-Grid and shows results in a grid forma
 | **lang** | Language of the displayed results |
 | **url-param-prefix** | String attribute, defines a prefix to add to all URL parameters that the component will use. Default is to use no prefix at all. |
 | **use-grid-api** | Normally, the Grid Results component uses the Search API. Set this to true to make it use the Grid API instead. This can be used if you want to simply show some data that is normally shown by the Grid component, but you also want the "View" button of Grid Results to give the option to show more information about the displayed results. (Default: false) |
+| **number-of-items** |  |
 | **sorting** | Boolean attribute, which enables or disables server-side sorting of the data. When enabled, sorting is only allowed in columns that the server allows it. |
 | **quick-filtering** | Boolean attribute, which enables or disables quick filtering. Quick filtering for this component is done server-side. (Default: false) |
 | **col-resize** | Boolean attribute, which defines if the grid will allow the user to resize the columns. (Default: false) |
 | **page-size** | Numeric attribute that defines the number of rows that the grid will load with each request to the server when the user scrolls and more rows have to be loaded with infinite scrolling. |
 | **element-h** | Height of the component, in pixels |
 | **show-results-num** | Boolean attribute, which defines if the component will show the number of loaded and total results on the page. (Default: false) |
+| **enable-view-button** | Enable or disable making the first column's content a link to view more details (Default: true) |
+| **project-details-type** | Type to use for viewing details when clicking the link in the first column. If not defined, will use the view-type, which may or may not work. |
 | **exporting** | Boolean attribute, which enables exporting the grid's results to a CSV file (Default: false) |
 | **export-btn-x** | Numeric attribute, which defines the x-axis position of the export button. |
 | **export-btn-y** | Numeric attribute, which defines the y-axis position of the export button. |
+| **popover-pos** | Attribute which defines from which side of the embed button the popover will appear. Available options: right, left, top, bottom. Default: right. |
 | **add-to-basket** | Boolean attribute, which enables or disables the "Add to Basket" functionality |
 | **basket-btn-x** | Numeric attribute, which defines the x-axis position of the "Add to Basket" button |
 | **basket-btn-y** | Numeric attribute, which defines the y-axis position of the "Add to Basket" button |
 | **extra-params** | Object with extra parameters to send in the request to the API |
-
-
+| **enable-rating** | Enable rating buttons for this component |
 
 > **Screenshot:**
 

@@ -79,8 +79,10 @@ This component is used to show a single aggregated value for some aspect of the 
 | **view-type** (required) | String attribute that defines the declarative name of the table which contains the data to be rendered. |
 | **lang** | Language of the visualised data |
 | **icon-size** | Number between 2-5, sets the size of the Aggregate's icon, in the view types that show icons. Default size is 4. |
+| **show-view-btn** | Set to true to display a "View details" button in the bottom of the aggregate. Not available for all layouts.  |
 | **element-h** | Minimum height of the component in pixels. Default is 140 pixels. |
 | **extra-params** | Object with extra parameters to send in the request to the API |
+| **base-url** | Base URL to send to the API, so links can be created in the component contents. Required for some view types (the API will return an error indicating it). |
 
 > **Screenshot:**
 

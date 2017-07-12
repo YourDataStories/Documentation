@@ -87,6 +87,7 @@ useful conclusions around the dataset.
 | Input  | Description |
 | ------ | ----------- |
 | **lang** | Language of the displayed results |
+| **user-id** | Set the logged in user's ID to enable saving results to the Library |
 
 > **Screenshot:**
 

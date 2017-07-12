@@ -38,6 +38,7 @@ will be used throughout the map.
 | **legend-v-align** | Specifies how to vertically align the chart legend. Can be top, middle or bottom (Default: top) |
 | **legend-h-align** | Specifies how to horizontally align the chart legend. Can be left, center or right (Default: center) |
 | **legend-layout** | Specifies if the legend should be vertical or horizontal (Default: horizontal) |
+| **europe-only** | Set to true to display only Europe on the heatmap instead of the world map (Default: false) |
 | **exporting** | Enable or disable exporting of the heat map (Default: true) |
 | **no-border** | If true, the heat map will not display a border around it like it does by default. |
 | **element-h** | Height of the heat map, in pixels |
@@ -84,6 +85,7 @@ an iframe element.
 | **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **element-h** | Height of the heat map, in pixels |
+| **enable-rating** | Enable rating buttons for this component |
 
 > **Screenshot:**
 
@@ -122,7 +124,6 @@ embedding functionality of the component.
 | **project-id** (required) | String attribute, which defines the unique identifier of the resource that the displayed data is associated with. If empty, the element cannot be initialized. |
 | **view-type** | String attribute that defines the declarative name of the table which contains the data to be rendered. Default value is "default". |
 | **lang** | Language of the visualised data |
-| **show-navigator** | Boolean attribute, which defines if the line component will show the navigator below the main chart<br>Default: true |
 | **exporting** | Enable or disable exporting of the chart (Default: true) |
 | **element-h** | Height of the component, in pixels |
 | **title-size** | Numeric attribute, which defines the size of the chart's title (Default: 18) |
@@ -133,6 +134,7 @@ embedding functionality of the component.
 | **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
+| **enable-rating** | Enable rating buttons for this component |
 
 > **Screenshot:**
 
@@ -182,6 +184,7 @@ The library is extended in the context of the YDS platform to support embed func
 | **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **extra-params** | Object with extra parameters to send in the request to the API |
+| **enable-rating** | Enable rating buttons for this component |
 
 > **Screenshot:**
 
@@ -217,7 +220,6 @@ The component is extended in the context of the YDS platform to support embed fu
 | **project-id** (required) | String attribute, which defines the unique identifier of the resource that the displayed data is associated with. If empty, the element cannot be initialized. |
 | **view-type** | String attribute that defines the declarative name of the table which contains the data to be rendered. Default value is "default". |
 | **lang** | Language of the visualised data |
-| **show-legend** | Boolean attribute, which enables or disables the chart legend |
 | **exporting** | Enable or disable exporting of the chart (Default: true) |
 | **element-h** | Height of the component, in pixels |
 | **title-size** | Numeric attribute, which defines the size of the chart's title (Default: 18) |
@@ -271,6 +273,7 @@ users have the ability to reorder and resize the columns of the grid according t
 | **paging** | Boolean attribute, which defines if the grid display will be paginated or not. If true, the grid rows will be divided in different views.<br>Available options: true, false<br>Default: false |
 | **page-size** | Numeric attribute that defines the rows per page of the paginated grid display.<br>Available options: 0-10000<br>Default: 100 |
 | **element-h** | Height of the component, in pixels |
+| **grouped-data** | For some view-types (e.g. "contract.comparison.CPVs.for.countries.and.period"), the data returned from the API is grouped. In these cases, set this value to true (Default: false) |
 | **exporting** | Boolean attribute, which enables exporting the grid's results to a CSV file (Default: false) |
 | **export-btn-x** | Numeric attribute, which defines the x-axis position of the export button. |
 | **export-btn-y** | Numeric attribute, which defines the y-axis position of the export button. |
@@ -282,6 +285,7 @@ users have the ability to reorder and resize the columns of the grid according t
 | **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **extra-params** | Object with extra parameters to send in the request to the API |
+| **enable-rating** | Enable rating buttons for this component |
 
 > **Screenshot:**
 
@@ -310,7 +314,6 @@ The scatter chart component is based on the Highcharts visualization library. It
 | **project-id** (required) | String attribute, which defines the unique identifier of the resource that the displayed data is associated with. If empty, the element cannot be initialized. |
 | **view-type** | String attribute that defines the declarative name of the table which contains the data to be rendered. Default value is "default". |
 | **lang** | Language of the visualised data |
-| **show-navigator** | Boolean attribute, which defines if the scatter chart component will show the navigator below the main chart<br>Default: true |
 | **exporting** | Enable or disable exporting of the chart (Default: true) |
 | **element-h** | Height of the component, in pixels |
 | **title-size** | Numeric attribute, which defines the size of the chart's title (Default: 18) |
@@ -321,6 +324,7 @@ The scatter chart component is based on the Highcharts visualization library. It
 | **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
+| **enable-rating** | Enable rating buttons for this component |
 
 > **Screenshot:**
 
@@ -348,6 +352,8 @@ The Bubble Chart component is based on the Highcharts visualization library. It 
 | **project-id** (required) | String attribute, which defines the unique identifier of the resource that the displayed data is associated with. If empty, the element cannot be initialized. |
 | **view-type** | String attribute that defines the declarative name of the table which contains the data to be rendered. Default value is "default". |
 | **lang** | Language of the visualised data |
+| **extra-params** | Object with extra parameters to send in the request to the API |
+| **base-url** | Base URL to send to the API, so links can be created for the bubbles. Required for some view types (the API will return an error indicating it). |
 | **exporting** | Enable or disable exporting of the chart (Default: true) |
 | **element-h** | Height of the component, in pixels |
 | **title-size** | Numeric attribute, which defines the size of the chart's title (Default: 18) |
@@ -359,6 +365,7 @@ The Bubble Chart component is based on the Highcharts visualization library. It 
 | **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
+| **enable-rating** | Enable rating buttons for this component |
 
 > **Screenshot:**
 
@@ -397,6 +404,7 @@ The tree map component displays each point of data as a rectange. Each rectangle
 | **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **extra-params** | Object with extra parameters to send in the request to the API |
+| **enable-rating** | Enable rating buttons for this component |
 
 > **Screenshot:**
 

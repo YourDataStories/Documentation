@@ -36,6 +36,7 @@ When the component loads, it gets the available Search concepts from the API, th
 | **hide-tabs** | Boolean attribute, used to hide the tabs of the tabbed search interface. Can be useful if you want to show the tabbed search interface only for a single concept (that you can select via the default-tab attribute). |
 | **url-param-prefix** | String attribute, defines a prefix to add to all URL parameters that the search interface will use. Useful when using multiple `<yds-search-tabs>` to show different concepts at the same time in the same page. |
 | **add-to-basket** | Boolean attribute, which defines if the "Add to Basket" button should be shown on the search results. |
+| **enable-adv-search** | Boolean attribute, which enables or disables advanced search. |
 
 > **Screenshot:**
 
@@ -151,6 +152,7 @@ The Grid Results component is based on ag-Grid and shows results in a grid forma
 | **lang** | Language of the displayed results |
 | **url-param-prefix** | String attribute, defines a prefix to add to all URL parameters that the component will use. Default is to use no prefix at all. |
 | **use-grid-api** | Normally, the Grid Results component uses the Search API. Set this to true to make it use the Grid API instead. This can be used if you want to simply show some data that is normally shown by the Grid component, but you also want the "View" button of Grid Results to give the option to show more information about the displayed results. (Default: false) |
+| **timeseries** | If you are using the grid API (see above), set this to true to show data per year instead of aggregated. |
 | **number-of-items** | If you are using the grid API (see above) but want to use virtual paging, set this parameter to the total number of items. |
 | **sorting** | Boolean attribute, which enables or disables server-side sorting of the data. When enabled, sorting is only allowed in columns that the server allows it. |
 | **quick-filtering** | Boolean attribute, which enables or disables quick filtering. Quick filtering for this component is done server-side. (Default: false) |
@@ -167,8 +169,13 @@ The Grid Results component is based on ag-Grid and shows results in a grid forma
 | **add-to-basket** | Boolean attribute, which enables or disables the "Add to Basket" functionality |
 | **basket-btn-x** | Numeric attribute, which defines the x-axis position of the "Add to Basket" button |
 | **basket-btn-y** | Numeric attribute, which defines the y-axis position of the "Add to Basket" button |
-| **extra-params** | Object with extra parameters to send in the request to the API |
-| **enable-rating** | Enable rating buttons for this component |
+| **embeddable** | Boolean attribute, which defines if the map component can be embedded or not.<br>Available options: true, false<br>Default: false |
+| **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
+| **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
+| **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
+| **extra-params** | Object with extra parameters to send in the request to the API. |
+| **enable-rating** | Enable rating buttons for this component. |
+| **disable-explanation** | Disable the chart query explanation button for this component. |
 
 > **Screenshot:**
 

@@ -49,8 +49,9 @@ information depends on the type of the resource that the user has visited.
 | **view-type** | String attribute that defines the declarative name of the table which contains the data to be rendered. |
 | **lang** | Language of the visualised data |
 | **label-col-width** | The number of Bootstrap grid columns the labels should take. Should be between 1-11, default is 4. |
-| **vertical** | If true, the info component will have a vertical layout |
-| **extra-params** | Object with extra parameters to send in the request to the API |
+| **vertical** | If true, the info component will have a vertical layout. |
+| **base-url** | Base URL to send to the API, so links can be created. Required for some view types (the API will return an error indicating it). |
+| **extra-params** | Object with extra parameters to send in the request to the API. |
 
 > **Screenshot:**
 
@@ -77,12 +78,13 @@ This component is used to show a single aggregated value for some aspect of the 
 | ------ | ----------- |
 | **project-id** | String attribute, which defines the unique identifier of the resource that the displayed aggregated value is associated with. Default value is "none" |
 | **view-type** (required) | String attribute that defines the declarative name of the table which contains the data to be rendered. |
-| **lang** | Language of the visualised data |
+| **lang** | Language of the visualised data. |
+| **base-url** | Base URL to send to the API, so links can be created in the component contents. Required for some view types (the API will return an error indicating it). |
+| **extra-params** | Object with extra parameters to send in the request to the API. |
 | **icon-size** | Number between 2-5, sets the size of the Aggregate's icon, in the view types that show icons. Default size is 4. |
 | **show-view-btn** | Set to true to display a "View details" button in the bottom of the aggregate. Not available for all layouts.  |
 | **element-h** | Minimum height of the component in pixels. Default is 140 pixels. |
-| **extra-params** | Object with extra parameters to send in the request to the API |
-| **base-url** | Base URL to send to the API, so links can be created in the component contents. Required for some view types (the API will return an error indicating it). |
+| **max-height** | Maximum height of the component in pixels. Works only for the "title" layout, and will scroll if the specified height is exceeded. |
 
 > **Screenshot:**
 

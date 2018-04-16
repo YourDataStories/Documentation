@@ -67,8 +67,6 @@ an iframe element.
     project-id="http://linkedeconomy.org/resource/Subsidy/519339"
     lang="en"
     embeddable="true"
-    embed-btn-x="520"
-    embed-btn-y="12"
     popover-pos="left">
 </yds-map>
 ```
@@ -84,11 +82,7 @@ an iframe element.
 | **max-cluster-radius** | Maximum radius that a cluster will cover from the central marker, in pixels. |
 | **mouse-over-markers** | Boolean attribute, that will make point markers appear on mouse over instead of click if true. |
 | **add-to-basket** | Boolean attribute, which enables or disables the "Add to Basket" functionality. |
-| **basket-btn-x** | Numeric attribute, which defines the x-axis position of the "Add to Basket" button. |
-| **basket-btn-y** | Numeric attribute, which defines the y-axis position of the "Add to Basket" button. |
 | **embeddable** | Boolean attribute, which defines if the map component can be embedded or not.<br>Available options: true, false<br>Default: false |
-| **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
-| **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **extra-params** | Object with extra parameters to send in the request to the API. |
 | **zoom-control** | Boolean attribute, which enables or disables the map's zoom control. |
@@ -120,9 +114,7 @@ embedding functionality of the component.
     lang="en"
     element-h="350"
     show-navigator="false"
-    add-to-basket="true"
-    basket-btn-x="42"
-    basket-btn-y="12">
+    add-to-basket="true">
 </yds-line>
 ```
 
@@ -139,11 +131,7 @@ embedding functionality of the component.
 | **element-h** | Height of the component, in pixels. |
 | **title-size** | Numeric attribute, which defines the size of the chart's title. (Default: 18) |
 | **add-to-basket** | Boolean attribute, which enables or disables the "Add to Basket" functionality. |
-| **basket-btn-x** | Numeric attribute, which defines the x-axis position of the "Add to Basket" button. |
-| **basket-btn-y** | Numeric attribute, which defines the y-axis position of the "Add to Basket" button. |
 | **embeddable** | Boolean attribute, which defines if the component can be embedded or not.<br>Available options: true, false<br>Default: false |
-| **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
-| **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **enable-rating** | Enable rating buttons for this component. |
 | **disable-explanation** | Disable the chart query explanation button for this component. |
@@ -173,7 +161,6 @@ The library is extended in the context of the YDS platform to support embed func
     view-type="aidactivity.benefactor.countries.all"
     add-to-basket="true"
     embeddable="true"
-    embed-btn-x="40"
     element-h="460">
 </yds-bar>
 ```
@@ -193,11 +180,7 @@ The library is extended in the context of the YDS platform to support embed func
 | **element-h** | Height of the component, in pixels. |
 | **title-size** | Numeric attribute, which defines the size of the chart's title. (Default: 18) |
 | **add-to-basket** | Boolean attribute, which enables or disables the "Add to Basket" functionality. |
-| **basket-btn-x** | Numeric attribute, which defines the x-axis position of the "Add to Basket" button. |
-| **basket-btn-y** | Numeric attribute, which defines the y-axis position of the "Add to Basket" button. |
 | **embeddable** | Boolean attribute, which defines if the map component can be embedded or not.<br>Available options: true, false<br>Default: false |
-| **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
-| **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **enable-rating** | Enable rating buttons for this component. |
 | **disable-explanation** | Disable the chart query explanation button for this component. |
@@ -241,11 +224,7 @@ The component is extended in the context of the YDS platform to support embed fu
 | **element-h** | Height of the component, in pixels. |
 | **title-size** | Numeric attribute, which defines the size of the chart's title (Default: 18) |
 | **add-to-basket** | Boolean attribute, which enables or disables the "Add to Basket" functionality. |
-| **basket-btn-x** | Numeric attribute, which defines the x-axis position of the "Add to Basket" button. |
-| **basket-btn-y** | Numeric attribute, which defines the y-axis position of the "Add to Basket" button. |
 | **embeddable** | Boolean attribute, which defines if the component can be embedded or not.<br>Available options: true, false<br>Default: false |
-| **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
-| **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **enable-rating** | Enable rating buttons for this component. |
 | **disable-explanation** | Disable the chart query explanation button for this component. |
@@ -294,14 +273,8 @@ users have the ability to reorder and resize the columns of the grid according t
 | **grouped-data** | For some view-types (e.g. "contract.comparison.CPVs.for.countries.and.period"), the data returned from the API is grouped. In these cases, set this value to true (Default: false) |
 | **timeseries** | Boolean attribute, set to true to show data per year instead of aggregated. |
 | **add-to-basket** | Boolean attribute, which enables or disables the "Add to Basket" functionality. |
-| **basket-btn-x** | Numeric attribute, which defines the x-axis position of the "Add to Basket" button. |
-| **basket-btn-y** | Numeric attribute, which defines the y-axis position of the "Add to Basket" button. |
 | **exporting** | Boolean attribute, which enables exporting the grid's results to a CSV file (Default: false) |
-| **export-btn-x** | Numeric attribute, which defines the x-axis position of the export button. |
-| **export-btn-y** | Numeric attribute, which defines the y-axis position of the export button. |
 | **embeddable** | Boolean attribute, which defines if the map component can be embedded or not.<br>Available options: true, false<br>Default: false |
-| **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
-| **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **fit-columns** | Boolean attribute, which defines if the grid will fit the columns to the grid width after loading. |
 | **enable-rating** | Enable rating buttons for this component. |
@@ -338,11 +311,7 @@ The scatter chart component is based on the Highcharts visualization library. It
 | **element-h** | Height of the component, in pixels |
 | **title-size** | Numeric attribute, which defines the size of the chart's title (Default: 18) |
 | **add-to-basket** | Boolean attribute, which enables or disables the "Add to Basket" functionality |
-| **basket-btn-x** | Numeric attribute, which defines the x-axis position of the "Add to Basket" button |
-| **basket-btn-y** | Numeric attribute, which defines the y-axis position of the "Add to Basket" button |
 | **embeddable** | Boolean attribute, which defines if the component can be embedded or not.<br>Available options: true, false<br>Default: false |
-| **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
-| **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **enable-rating** | Enable rating buttons for this component |
 | **disable-explanation** | Disable the chart query explanation button for this component. |
@@ -381,11 +350,7 @@ The Bubble Chart component is based on the Highcharts visualization library. It 
 | **subtitle** | Set a subtitle for the chart to help guide the user. |
 | **legend** | Boolean attribute, which enables or disables the chart legend (Default: false) |
 | **add-to-basket** | Boolean attribute, which enables or disables the "Add to Basket" functionality |
-| **basket-btn-x** | Numeric attribute, which defines the x-axis position of the "Add to Basket" button |
-| **basket-btn-y** | Numeric attribute, which defines the y-axis position of the "Add to Basket" button |
 | **embeddable** | Boolean attribute, which defines if the component can be embedded or not.<br>Available options: true, false<br>Default: false |
-| **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
-| **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **enable-rating** | Enable rating buttons for this component |
 | **disable-explanation** | Disable the chart query explanation button for this component. |
@@ -421,11 +386,7 @@ The tree map component displays each point of data as a rectange. Each rectangle
 | **element-h** | Height of the component, in pixels. |
 | **title-size** | Numeric attribute, which defines the size of the chart's title. (Default: 18) |
 | **add-to-basket** | Boolean attribute, which enables or disables the "Add to Basket" functionality. |
-| **basket-btn-x** | Numeric attribute, which defines the x-axis position of the "Add to Basket" button. |
-| **basket-btn-y** | Numeric attribute, which defines the y-axis position of the "Add to Basket" button. |
 | **embeddable** | Boolean attribute, which defines if the component can be embedded or not.<br>Available options: true, false<br>Default: false |
-| **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
-| **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **enable-rating** | Enable rating buttons for this component. |
 | **disable-explanation** | Disable the chart query explanation button for this component. |

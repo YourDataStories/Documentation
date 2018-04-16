@@ -110,11 +110,7 @@ The Advanced Grid component is based on the ag-Grid library. It supports combobo
 | **combobox-labels** | String attribute, which sets the labels that will be used for each filter. For multiple labels, separate them with commas. |
 | **combobox-attrs** | String attribute, which sets the names of the parameters that each combobox will use to send its value to the server. For multiple comboboxes, separate the attribute names with commas. |
 | **add-to-basket** | Boolean attribute, which enables or disables the "Add to Basket" functionality. |
-| **basket-btn-x** | Numeric attribute, which defines the x-axis position of the "Add to Basket" button. |
-| **basket-btn-y** | Numeric attribute, which defines the y-axis position of the "Add to Basket" button. |
 | **embeddable** | Boolean attribute, which defines if the component can be embedded or not.<br>Available options: true, false<br>Default: false |
-| **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
-| **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **disable-explanation** | Disable the chart query explanation button for this component. |
 

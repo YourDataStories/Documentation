@@ -163,15 +163,9 @@ The Grid Results component is based on ag-Grid and shows results in a grid forma
 | **enable-view-button** | Enable or disable making the first column's content a link to view more details (Default: true) |
 | **project-details-type** | Type to use for viewing details when clicking the link in the first column. If not defined, will use the view-type, which may or may not work. |
 | **exporting** | Boolean attribute, which enables exporting the grid's results to a CSV file (Default: false) |
-| **export-btn-x** | Numeric attribute, which defines the x-axis position of the export button. |
-| **export-btn-y** | Numeric attribute, which defines the y-axis position of the export button. |
 | **popover-pos** | Attribute which defines from which side of the embed button the popover will appear. Available options: right, left, top, bottom. Default: right. |
 | **add-to-basket** | Boolean attribute, which enables or disables the "Add to Basket" functionality |
-| **basket-btn-x** | Numeric attribute, which defines the x-axis position of the "Add to Basket" button |
-| **basket-btn-y** | Numeric attribute, which defines the y-axis position of the "Add to Basket" button |
 | **embeddable** | Boolean attribute, which defines if the map component can be embedded or not.<br>Available options: true, false<br>Default: false |
-| **embed-btn-x** | Numeric attribute, which defines the x-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
-| **embed-btn-y** | Numeric attribute, which defines the y-axis position of the embed button.<br>Default: 12 (12px from the top left corner of the component) |
 | **popover-pos** | Attribute which defines from which side of the embed button, the embed information window will appear.<br>Available options: right, left, top, bottom<br>Default: right |
 | **extra-params** | Object with extra parameters to send in the request to the API. |
 | **enable-rating** | Enable rating buttons for this component. |
